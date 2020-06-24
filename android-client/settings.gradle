@@ -1,0 +1,2 @@
+rootProject.name='Acadiverse Mobile'
+include ':app'
