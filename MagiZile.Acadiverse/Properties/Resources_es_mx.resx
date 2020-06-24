@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="str_account_permabanned" xml:space="preserve">
+    <value>Su cuenta ha sido prohibida permanentemente por violar reiterada o severamente nuestro Código de conducta. La razón específica dada fue: $ 1. Si crees que te prohibieron por error, puedes ir a http: //acadiverse.magizile.com/account/appeal para apelar esta prohibición.</value>
+    <comment>This message is shown if a user tries to log in while they are permanently banned from Acadiverse.</comment>
+  </data>
+  <data name="str_account_tempbanned" xml:space="preserve">
+    <value>Su cuenta ha sido prohibida hasta $ 1 por la siguiente razón: $ 2.</value>
+    <comment>This message is shown if a user tries to log in while they are temporairly banned from Acadiverse.</comment>
+  </data>
+  <data name="str_banned_from_chat" xml:space="preserve">
+    <value>No puede realizar esta acción ya que actualmente tiene prohibido enviar mensajes de chat / enviar usuarios PM que no son moderadores. Por favor contáctenos si cree que esto es un error.</value>
+    <comment>This message is shown if a user who is banned from chat tries to send a chat message or tries to send a PM to a user who is not a moderator.</comment>
+  </data>
+  <data name="str_banned_from_publishing" xml:space="preserve">
+    <value>No puede realizar esta acción ya que actualmente tiene prohibido publicar contenido en Acadiverse. Por favor contáctenos si cree que esto es un error.</value>
+    <comment>This message is shown if a user who was banned from publishing tries to publish content to Acadiverse.</comment>
+  </data>
+  <data name="str_blank_password" xml:space="preserve">
+    <value>Por favor, introduzca su contraseña.</value>
+    <comment>This message is shown if the PAssword field is blank.</comment>
+  </data>
+  <data name="str_blank_username" xml:space="preserve">
+    <value>Por favor, ingrese su nombre de usuario.</value>
+    <comment>This message is shown if the Username field is blank.</comment>
+  </data>
+  <data name="str_connection_error" xml:space="preserve">
+    <value>Error al conectar con el servidor. Por favor revise su conexion a internet. Nuestros servidores también pueden estar inactivos; Si este es el caso, espere unos minutos y / o vuelva a intentarlo más tarde.</value>
+    <comment>This message is shown if there was a problrm connecting to the Acadiverse Servers.</comment>
+  </data>
+  <data name="str_content_removed_message_contents" xml:space="preserve">
+    <value>Su contenido, "$ 1", fue eliminado de Acadiverse por la siguiente razón: $ 2.</value>
+    <comment>This is the PM that is sent to a user when a moderator removes something that they published.</comment>
+  </data>
+  <data name="str_content_removed_message_subject" xml:space="preserve">
+    <value>Su contenido ha sido eliminado.</value>
+    <comment>This is the subject for the PM that is sent to a user when a moderator removes something that they published.</comment>
+  </data>
+  <data name="str_delete_message_confirmation" xml:space="preserve">
+    <value>¿Estás seguro de que deseas eliminar este mensaje? ¡Esto no se puede deshacer!</value>
+    <comment>This is the confirmation that is shown when deleting a chat message or a PM.</comment>
+  </data>
+  <data name="str_incorrect_passwrod" xml:space="preserve">
+    <value>Tu contraseña es incorrecta.</value>
+    <comment>This message is shown when the user enters an incorrect password.</comment>
+  </data>
+  <data name="str_incorrect_username" xml:space="preserve">
+    <value>No existe una cuenta con este nombre de usuario.</value>
+    <comment>This message is shown when the user enters a nonexistent username or when the user tries to view the profile of ia deleted account.</comment>
+  </data>
+  <data name="str_logout_confirmation" xml:space="preserve">
+    <value>¿Estás segura de que deseas cerrar sesión?</value>
+    <comment>This message is shown when a user clicks on the Log Out button.</comment>
+  </data>
+  <data name="str_message_deleted_by_moderator" xml:space="preserve">
+    <value>[Mensaje eliminado por una moderadora].</value>
+    <comment>This is the placeholder for a chat message that was removed by a moderator.</comment>
+  </data>
+  <data name="str_message_deleted_by_user" xml:space="preserve">
+    <value>[Mensaje eliminado por la usuario].</value>
+    <comment>This is the placeholder for a chat message that was removed by the person who posted it.</comment>
+  </data>
+  <data name="str_pm_user_blocked" xml:space="preserve">
+    <value>No puede enviar PM a este usuario porque lo ha bloqueado.</value>
+    <comment>This message is shown when the user tries to PM a user who has blocked them.</comment>
+  </data>
+  <data name="str_pm_user_opted_out" xml:space="preserve">
+    <value>No puede enviar PM a este usuario porque ha elegido no recibir PM de usuarios que no son moderadores.</value>
+    <comment>This message is shown if a user tries to PM another user but that user has chosen not to recieve PMs and the user who tried to PM them is not a moderator.</comment>
+  </data>
+  <data name="str_problem_with_credentials" xml:space="preserve">
+    <value>Se ha cerrado la sesión porque hay un problema con sus credenciales.</value>
+    <comment>This message is shown if a user's password is changed while they are logged in.</comment>
+  </data>
+  <data name="str_report_confirmation" xml:space="preserve">
+    <value>Está a punto de reportar $ 1 por la siguiente razón: $ 2. Tenga en cuenta que los informes se toman muy en serio y que el envío de informes falsos puede resultar en una prohibición. ¿Continuar con la remodelación de este usuario?</value>
+    <comment>This is the confirmation message for reporting a user.</comment>
+  </data>
+  <data name="str_report_message_contents" xml:space="preserve">
+    <value>$ 1 ha reportado $ 2 por la siguiente razón: $ 3. El contexto del informe (el contenido por el cual $ 1 informó $ 2) es: $ 4. Por favor revise este contenido de inmediato.</value>
+    <comment>This is the PM what is sent to moderators when a user reports another user.</comment>
+  </data>
+  <data name="str_report_message_subject" xml:space="preserve">
+    <value>$ 1 ha reportado $ 2.</value>
+    <comment>This is the subject for the PM that is sent to moderators when a user reports another user.</comment>
+  </data>
+  <data name="str_slur_entered" xml:space="preserve">
+    <value>Esta acción no se pudo realizar porque su mensaje contiene un insulto racial. Has ganado una huelga por esta acción. Si intenta enviar este tipo de mensajes $ 1 más veces, se le prohibió de chat / enviar MPs.</value>
+    <comment>This message is shown if the user tries to use a racial or cultural slur in a PM or a chat message.</comment>
+  </data>
+  <data name="str_submission_slur_entered" xml:space="preserve">
+    <value>Su envío no se pudo publicar porque el envío o sus metadatos (título, descripción y / o etiquetas) contienen un insulto racial. Has recibido una huelga por esta acción. Si intenta publicar dicho contenido $ 1 más veces, se le prohibirá publicar cualquier cosa en Acadiverse.</value>
+    <comment>This message is shown if a user tries to publish something with a racial/cultural slur in it or its metadata.</comment>
+  </data>
+  <data name="str_submission_swear_word_entered" xml:space="preserve">
+    <value>Su envío no se pudo publicar porque el envío o sus metadatos (título, descripción y / o etiquetas) contienen una mala palabra. Has recibido una huelga por esta acción. Si intenta publicar dicho contenido $ 1 más veces, se le prohibirá publicar cualquier cosa en Acadiverse.</value>
+    <comment>This message is shown if a user tries to publish something with a swear word in it or its metadata.</comment>
+  </data>
+  <data name="str_swear_word_entered" xml:space="preserve">
+    <value>Esta acción no se pudo realizar porque su mensaje contiene lenguaje incorrecto o contenido sugerente. Has ganado una huelga por esta acción. Si intenta enviar dichos mensajes $ 1 más veces, se le prohibió de chat / enviar MPs.</value>
+    <comment>This message is shown if the user tries to swear in a PM or a chat message.</comment>
+  </data>
+  <data name="str_too_many_chat_strikes" xml:space="preserve">
+    <value>Se le ha prohibido automáticamente enviar chat / PM porque ha intentado enviar un mensaje de chat / PM con malas palabras o insultos raciales / culturales demasiadas veces.</value>
+    <comment>This message is shown when a user recieves their third chat strike.</comment>
+  </data>
+  <data name="str_too_many_publishing_strikes" xml:space="preserve">
+    <value>Se le ha prohibido automáticamente publicar contenido en Acadiverse porque ha intentado publicar algo con una palabrota o insulto racial / cultural en él o sus metadatos (título, descripción y / o etiquetas) demasiadas veces.</value>
+    <comment>This message is shown when a user recieves their third publishing strike.</comment>
+  </data>
+  <data name="str_warning_message_contents" xml:space="preserve">
+    <value>Recibió una advertencia por el siguiente motivo: $ 1.</value>
+    <comment>This is the PM that is sent to a user when they have recieved a warning from the "Warn User" interface.</comment>
+  </data>
+  <data name="str_warning_message_subject" xml:space="preserve">
+    <value>Has recibido una advertencia.</value>
+    <comment>This is the subjectfor the PM that is sent to a user when they have recieved a warning from the "Warn User" interface.</comment>
+  </data>
+  <data name="str_wrong_account_type" xml:space="preserve">
+    <value>Esta característica solo está disponible para $ cuentas.</value>
+    <comment>This message is shown if a user tries to do something that requires a different account type (e.g. a student trying to launch Acadiverse Lesson Studio).</comment>
+  </data>
+</root>

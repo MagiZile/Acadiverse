@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="img_profile_banned_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_profile_banned_user.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_profile_default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_profile_default.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_account_permabanned" xml:space="preserve">
+    <value>Your account has been permanently banned for repeatedly or severely violating our Code of Conduct. The specific reason given was: $1. If you believe that you were banned in error, you can go to http://acadiverse.magizile.xom/account/appeal to appeal this ban.</value>
+    <comment>This message is shown if a user tries to log in while they are permanently banned from Acadiverse.</comment>
+  </data>
+  <data name="str_account_tempbanned" xml:space="preserve">
+    <value>Your account has been banned until $1 for the following reason: $2.</value>
+    <comment>This message is shown if a user tries to log in while they are temporairly banned from Acadiverse.</comment>
+  </data>
+  <data name="str_achievement_member_anniversary_description" xml:space="preserve">
+    <value>Be a member of Acadiverse for $1 years.</value>
+    <comment>This is the description of the achievement that is recieved when a user hits the anniversary of the day that they signed up for Acadverse.</comment>
+  </data>
+  <data name="str_achievement_member_anniversary_title" xml:space="preserve">
+    <value>$1 Anniversary</value>
+    <comment>This is title of the achievement that is recieved when a user hits the anniversary of the day that they signed up for Acadiverse.</comment>
+  </data>
+  <data name="str_achievement_perfect_quiz_score_description" xml:space="preserve">
+    <value>Get a perfect score on a quiz.</value>
+    <comment>This is the description of the acheivement that is recieved when a user gets 100% on a quiz.</comment>
+  </data>
+  <data name="str_achievement_perfect_quiz_score_title" xml:space="preserve">
+    <value>Aced It</value>
+    <comment>This is the title of the achievement that is received when a user gets 100% on a quiz.</comment>
+  </data>
+  <data name="str_achievement_top_publisher_description" xml:space="preserve">
+    <value>Get a submission featured.</value>
+    <comment>This is the description of the achievement that is received when a user's submission gets featured.</comment>
+  </data>
+  <data name="str_achievement_top_publisher_title" xml:space="preserve">
+    <value>Top Publisher</value>
+    <comment>This is the title of the acheivement that is received when a user's submission gets featured.</comment>
+  </data>
+  <data name="str_automatic_ban_reason" xml:space="preserve">
+    <value>You have been automatically banned because you have received your $1 warning.</value>
+    <comment>This is the reason given when a user is automatically banned after receiving a warning.</comment>
+  </data>
+  <data name="str_banned_from_chat" xml:space="preserve">
+    <value>You may not perform this action as you are currently banned from sending chat messages/PMing users who are not moderators. Please contact us if you believe that this is a mistake.</value>
+    <comment>This message is shown if a user who is banned from chat tries to send a chat message or tries to send a PM to a user who is not a moderator.</comment>
+  </data>
+  <data name="str_banned_from_publishing" xml:space="preserve">
+    <value>You may not perform this action as you are currently banned from publshing content to Acadiverse. Please contact us if you believe that this is a mistake.</value>
+    <comment>This message is shown if a user who was banned from publishing tries to publish content to Acadiverse.</comment>
+  </data>
+  <data name="str_blank_password" xml:space="preserve">
+    <value>Please enter your password.</value>
+    <comment>This message is shown if the Password field is blank.</comment>
+  </data>
+  <data name="str_blank_username" xml:space="preserve">
+    <value>Please enter your username.</value>
+    <comment>This message is shown if the Username field is blank.</comment>
+  </data>
+  <data name="str_blocked_from_chat" xml:space="preserve">
+    <value>This action could not be performed because you have been blocked from this chat. Please contact one of the chat moderators if you believe that this is in error.</value>
+    <comment>The message that pops up when a user tries to chat in a chat that they are blocked from.</comment>
+  </data>
+  <data name="str_block_user_confirmation" xml:space="preserve">
+    <value>Are you sure you wish to block this user? They will not be able to send you any PMs or comment on your submissions, and they will also be automatically blocked from any chats that you owm!</value>
+    <comment>This is the confirmation message that is shown when blocking a user.</comment>
+  </data>
+  <data name="str_block_user_from_chat_confirmation" xml:space="preserve">
+    <value>Are you sure you wish to block this user from this chat? They will not be able to send any more chat messages!</value>
+    <comment>This is the confirmation message that is shown when blocking the user from sending messages in a chat.</comment>
+  </data>
+  <data name="str_chat_deleted" xml:space="preserve">
+    <value>This action could not be perfoemed as the chat has been deleted. Chats can be deleted by the owner, or they can be deleted by an Acadiverse moderator or an admin for violating the Terms of Service or Code of Conduct.</value>
+    <comment>This message is shwn if a user attempts to open, chat in, or manage a chat that has been deleted.</comment>
+  </data>
+  <data name="str_connection_error" xml:space="preserve">
+    <value>Failed to connect to the server. Please check your Internet connection. Our servers may also be down; if this is the case, please wait a few minutes and/or try again later.</value>
+    <comment>This message is shown if there was a problrm connecting to the Acadiverse Servers.</comment>
+  </data>
+  <data name="str_content_removed_message_contents" xml:space="preserve">
+    <value>Your content, "$1", was removed from Acadiverse for the following reason: $2.</value>
+    <comment>This is the PM that is sent to a user when a moderator removes something that they published.</comment>
+  </data>
+  <data name="str_content_removed_message_subject" xml:space="preserve">
+    <value>Your content has been removed.</value>
+    <comment>This is the subject for the PM that is sent to a user when a moderator removes something that they published.</comment>
+  </data>
+  <data name="str_delete_message_confirmation" xml:space="preserve">
+    <value>Are you sure you wish to delete this message? This can NOT be undone!</value>
+    <comment>This is the confirmation that is shown when deleting a chat message or a PM.</comment>
+  </data>
+  <data name="str_incorrect_passwrod" xml:space="preserve">
+    <value>Your password is incorrect.</value>
+    <comment>This message is shown when the user enters an incorrect password.</comment>
+  </data>
+  <data name="str_incorrect_username" xml:space="preserve">
+    <value>No account exists with this username.</value>
+    <comment>This message is shown when the user enters a nonexistent username or when the user tries to view the profile of ia deleted account.</comment>
+  </data>
+  <data name="str_logout_confirmation" xml:space="preserve">
+    <value>Are you sure you wish to log out?</value>
+    <comment>This message is shown when a user clicks on the Log Out button.</comment>
+  </data>
+  <data name="str_message_deleted_by_moderator" xml:space="preserve">
+    <value>[message removed by a moderator].</value>
+    <comment>This is the placeholder for a chat message that was removed by a moderator.</comment>
+  </data>
+  <data name="str_message_deleted_by_user" xml:space="preserve">
+    <value>[message removed by user].</value>
+    <comment>This is the placeholder for a chat message that was removed by the person who posted it.</comment>
+  </data>
+  <data name="str_notification_achievement_recieved" xml:space="preserve">
+    <value>Congrats! You have recieved the "$1" achievement and gained $2 Reputation Points and $3 Acadicoins!</value>
+    <comment>This notification is shown when a user recieves an achievement.</comment>
+  </data>
+  <data name="str_notification_count" xml:space="preserve">
+    <value>$1 new notifications.</value>
+    <comment>This shows how many new (unread) notifications a user has.</comment>
+  </data>
+  <data name="str_notification_first_submission_upvote" xml:space="preserve">
+    <value>You have gotten your first upvote on your submission "$1"!</value>
+    <comment>This notification is shown when a user's submission is upvoted for the first time.</comment>
+  </data>
+  <data name="str_notification_mentioned_in_chat" xml:space="preserve">
+    <value>$1 mentioned you in chat.</value>
+    <comment>This is the notification that is shown when a user is mentioned ("@username") in chat.</comment>
+  </data>
+  <data name="str_notification_mentioned_in_comments" xml:space="preserve">
+    <value>$1 mentioned you in the comments for the submission "$2".</value>
+    <comment>This is the notification that is shown when a user is mentioned ("@username") in the comments for a submission.</comment>
+  </data>
+  <data name="str_notification_pm" xml:space="preserve">
+    <value>$1 has sent you a PM.</value>
+    <comment>This is the notification that is shown when a user recieves a PM.</comment>
+  </data>
+  <data name="str_notification_submission_comment" xml:space="preserve">
+    <value>$1 has commented on your submission "$2".</value>
+    <comment>This is the notification that is shown when a user gets a comment on something that they published to Acadiverse.</comment>
+  </data>
+  <data name="str_notification_submission_featured" xml:space="preserve">
+    <value>Congrats! Your submission, "$1", has been featured on the Submissions page!</value>
+    <comment>This notification is shown after a user's submission gets featured on the Submissions page.</comment>
+  </data>
+  <data name="str_notification_upvote_milestone" xml:space="preserve">
+    <value>You have gotten your $1 upvote on your submission "$1"!</value>
+    <comment>This is the notification that is shown when a user's submission hits an upvote "milestone" (10, 50, 100, 500, 1,000, 5,000, or 10,000).</comment>
+  </data>
+  <data name="str_not_enough_money" xml:space="preserve">
+    <value>You cannot afford this item. It costs $1 Acadicoins and you currently have $2.</value>
+    <comment>This message is shown when the user tries to purchase something that they do not have enough Acadicoins for (NOTE: The dollar signs are NOT a representation of any money values!).</comment>
+  </data>
+  <data name="str_not_enough_reputation_points" xml:space="preserve">
+    <value>You need at least $1 Reputation Points to perform this action.</value>
+    <comment>This message is shown if a user tries to do something that they do not have enough Reputation Points for.</comment>
+  </data>
+  <data name="str_pm_user_blocked" xml:space="preserve">
+    <value>You cannot PM this user because they have blocked you.</value>
+    <comment>This message is shown when the user tries to PM a user who has blocked them.</comment>
+  </data>
+  <data name="str_pm_user_opted_out" xml:space="preserve">
+    <value>You cannot PM this user because they have chosen not to receive PMs from users who are not moderators.</value>
+    <comment>This message is shown if a user tries to PM another user but that user has chosen not to recieve PMs and the user who tried to PM them is not a moderator.</comment>
+  </data>
+  <data name="str_private_chat_insufficient_permissions" xml:space="preserve">
+    <value>This action could not be performed because the chat is private and you have not been given the appropriate permissions to access it.</value>
+    <comment>This message is shown if a user tries to send a message in a private chat when they do not have permission to access it.</comment>
+  </data>
+  <data name="str_problem_with_credentials" xml:space="preserve">
+    <value>You have been logged out as there is a problem with your credentials.</value>
+    <comment>This message is shown if a user's password is changed while they are logged in.</comment>
+  </data>
+  <data name="str_report_confirmation" xml:space="preserve">
+    <value>You are about to report $1 for the following reason: $2. Please note that reports are taken very seriously, and that sending false reports may result in a ban. Proceed with reporfting this user?</value>
+    <comment>This is the confirmation message for reporting a user.</comment>
+  </data>
+  <data name="str_report_message_contents" xml:space="preserve">
+    <value>$1 has reported $2 for the following reason: $3. The context of the report (the content that $1 reported $2) for is: $4. Please review this content immediately.</value>
+    <comment>This is the PM what is sent to moderators when a user reports another user.</comment>
+  </data>
+  <data name="str_report_message_subject" xml:space="preserve">
+    <value>$1 has reported $2.</value>
+    <comment>This is the subject for the PM that is sent to moderators when a user reports another user.</comment>
+  </data>
+  <data name="str_slur_entered" xml:space="preserve">
+    <value>This action could not be performed because your message contains a racial slur. You have earned a strike for this action. If you attempt to send such messages $1 more times, you will be banned from chatting/sending PMs.</value>
+    <comment>This message is shown if the user tries to use a racial or cultural slur in a PM or a chat message.</comment>
+  </data>
+  <data name="str_submission_slur_entered" xml:space="preserve">
+    <value>Your submission could not be published because the submission or its metadata (title, description, and/or tags) contains a racial/cultural slur. You have recieved a strike for this action. If you attempt to publish such content $1 more times, you will be banned from publishing anything to Acadiverse.</value>
+    <comment>This message is shown if a user tries to publish something with a racial/cultural slur in it or its metadata.</comment>
+  </data>
+  <data name="str_submission_swear_word_entered" xml:space="preserve">
+    <value>Your submission could not be published because the submission or its metadata (title, description, and/or tags) contains a swear word. You have recieved a strike for this action. If you attempt to publish such content $1 more times, you will be banned from publishing anything to Acadiverse.</value>
+    <comment>This message is shown if a user tries to publish something with a swear word in it or its metadata.</comment>
+  </data>
+  <data name="str_swear_word_entered" xml:space="preserve">
+    <value>This action could not be performed because your message contains bad language or suggestive content. You have earned a strike for this action. If you attempt to send such messages $1 more times, you will be banned from chatting/sending PMs.</value>
+    <comment>This message is shown if the user tries to swear in a PM or a chat message.</comment>
+  </data>
+  <data name="str_too_many_chat_strikes" xml:space="preserve">
+    <value>You have been automatically banned from sending chat/PMs because you have attempted to send a chat message/PM with swear words or racial/cultural slurs in it too many times.</value>
+    <comment>This message is shown when a user recieves their third chat strike.</comment>
+  </data>
+  <data name="str_too_many_publishing_strikes" xml:space="preserve">
+    <value>You have been automatically banned from publishing content to Acadiverse because you have attempted to publish something with a swear word or racial/cultural slur in it or its metadata (title, description, and/or tags) too many times.</value>
+    <comment>This message is shown when a user recieves their third publishing strike.</comment>
+  </data>
+  <data name="str_warning_message_contents" xml:space="preserve">
+    <value>You have recieved a warning for the following reason: $1. </value>
+    <comment>This is the PM that is sent to a user when they have recieved a warning from the "Warn User" interface.</comment>
+  </data>
+  <data name="str_warning_message_subject" xml:space="preserve">
+    <value>You have recieved a warning.</value>
+    <comment>This is the subjectfor the PM that is sent to a user when they have recieved a warning from the "Warn User" interface.</comment>
+  </data>
+  <data name="str_wrong_account_type" xml:space="preserve">
+    <value>This feature is only available to $ accounts.</value>
+    <comment>This message is shown if a user tries to do something that requires a different account type (e.g. a student trying to launch Acadiverse Lesson Studio).</comment>
+  </data>
+</root>

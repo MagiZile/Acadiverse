@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+    <Product Id="E7C2BCCE-17F8-45F7-BAE6-D37F59947C33" Name="Acadiverse" Language="1033" Version="0.0.0.1" Manufacturer="MagiZile" UpgradeCode="48FCE594-267E-4308-B62C-4E9455E3D287">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles" />
+            <Directory Id="RELEASE" Name="Release">
+                <Component Id="ACADIVERSE_LESSON_STUDIO.EXE" DiskId="1" Guid="A3835222-87C5-45E9-891C-EABF2126A133">
+                    <File Id="ACADIVERSE_LESSON_STUDIO.EXE" Name="Acadiverse Lesson Studio.exe" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Acadiverse Lesson Studio.exe" />
+                </Component>
+                <Component Id="ACADIVERSE_LESSON_STUDIO.EXE.CONFIG" DiskId="1" Guid="C5AC86BA-E1F3-477A-A7AE-AF54EF20CB68">
+                    <File Id="ACADIVERSE_LESSON_STUDIO.EXE.CONFIG" Name="Acadiverse Lesson Studio.exe.config" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Acadiverse Lesson Studio.exe.config" />
+                </Component>
+                <Component Id="ACADIVERSE_LESSON_STUDIO.PDB" DiskId="1" Guid="3F899EEE-39DF-43E9-8EBE-31CF2860D279">
+                    <File Id="ACADIVERSE_LESSON_STUDIO.PDB" Name="Acadiverse Lesson Studio.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Acadiverse Lesson Studio.pdb" />
+                </Component>
+                <Component Id="ACADIVERSEDESKTOP.EXE" DiskId="1" Guid="338D8DE7-62AF-4252-BF0D-A52C2EAEA026">
+                    <File Id="ACADIVERSEDESKTOP.EXE" Name="AcadiverseDesktop.exe" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\AcadiverseDesktop.exe">
+                        <Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="Acadiverse" WorkingDirectory="INSTALLDIR" Advertise="yes" Icon="DesktopIcon.exe" IconIndex="0" />
+                        <Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="Acadiverse" Advertise="yes" Icon="StartMenuIcon.exe" IconIndex="0" />
+                    </File>
+                </Component>
+                <Component Id="ACADIVERSEDESKTOP.EXE.CONFIG" DiskId="1" Guid="6B68BF35-A429-4611-8C57-6F4E93115011">
+                    <File Id="ACADIVERSEDESKTOP.EXE.CONFIG" Name="AcadiverseDesktop.exe.config" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\AcadiverseDesktop.exe.config" />
+                </Component>
+                <Component Id="ACADIVERSEDESKTOP.PDB" DiskId="1" Guid="BAB5492A-9C05-426E-BC5B-19716C8035FD">
+                    <File Id="ACADIVERSEDESKTOP.PDB" Name="AcadiverseDesktop.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\AcadiverseDesktop.pdb" />
+                </Component>
+                <Component Id="CRC32C.NET.DLL" DiskId="1" Guid="A904252A-5314-4C08-80E4-2BCB90EB1FD8">
+                    <File Id="CRC32C.NET.DLL" Name="Crc32C.NET.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Crc32C.NET.dll" />
+                </Component>
+                <Component Id="CRC32C.NET.XML" DiskId="1" Guid="156155FC-D81D-43D4-8C45-E71C6C1A4372">
+                    <File Id="CRC32C.NET.XML" Name="Crc32C.NET.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Crc32C.NET.xml" />
+                </Component>
+                <Component Id="DNSCLIENT.DLL" DiskId="1" Guid="25596DC1-E173-4C55-8758-C71FD78AAFB6">
+                    <File Id="DNSCLIENT.DLL" Name="DnsClient.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\DnsClient.dll" />
+                </Component>
+                <Component Id="DNSCLIENT.XML" DiskId="1" Guid="8D032213-C92C-4689-9577-8C8CCEEB772F">
+                    <File Id="DNSCLIENT.XML" Name="DnsClient.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\DnsClient.xml" />
+                </Component>
+                <Component Id="LIBZSTD.DLL" DiskId="1" Guid="995412D4-6868-4DFA-BE55-925CA3779D5C">
+                    <File Id="LIBZSTD.DLL" Name="libzstd.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\libzstd.dll" />
+                </Component>
+                <Component Id="MAGIZILE.ACADIVERSE.DLL" DiskId="1" Guid="19072CF5-9F91-4D7F-948E-191C8E000963">
+                    <File Id="MAGIZILE.ACADIVERSE.DLL" Name="MagiZile.Acadiverse.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.Acadiverse.dll" />
+                </Component>
+                <Component Id="MAGIZILE.ACADIVERSE.PDB" DiskId="1" Guid="90B261A4-87AA-4283-8465-787BC35D823C">
+                    <File Id="MAGIZILE.ACADIVERSE.PDB" Name="MagiZile.Acadiverse.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.Acadiverse.pdb" />
+                </Component>
+                <Component Id="MAGIZILE.ADDONS.DLL" DiskId="1" Guid="B38E59BA-C74C-482E-B9D2-33D28517AD6C">
+                    <File Id="MAGIZILE.ADDONS.DLL" Name="MagiZile.AddOns.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.AddOns.dll" />
+                </Component>
+                <Component Id="MAGIZILE.ADDONS.PDB" DiskId="1" Guid="668FCBF0-2CB6-43D7-9371-1A6F4850051D">
+                    <File Id="MAGIZILE.ADDONS.PDB" Name="MagiZile.AddOns.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.AddOns.pdb" />
+                </Component>
+                <Component Id="MAGIZILE.CUSTOMUI.DLL" DiskId="1" Guid="A4363817-A16E-410A-922C-12A389BE1CAE">
+                    <File Id="MAGIZILE.CUSTOMUI.DLL" Name="MagiZile.CustomUI.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.CustomUI.dll" />
+                </Component>
+                <Component Id="MAGIZILE.CUSTOMUI.PDB" DiskId="1" Guid="8423FDF1-42DB-47E3-AFAF-9661E007FC76">
+                    <File Id="MAGIZILE.CUSTOMUI.PDB" Name="MagiZile.CustomUI.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.CustomUI.pdb" />
+                </Component>
+                <Component Id="MAGIZILE.USERINTERACTIONS.DATA.DLL" DiskId="1" Guid="6BA5CEEA-7AD8-4588-A723-5CBDC6B33930">
+                    <File Id="MAGIZILE.USERINTERACTIONS.DATA.DLL" Name="MagiZile.UserInteractions.Data.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UserInteractions.Data.dll" />
+                </Component>
+                <Component Id="MAGIZILE.USERINTERACTIONS.DATA.PDB" DiskId="1" Guid="DB75CF50-B849-44A1-BE30-1435D27A78EC">
+                    <File Id="MAGIZILE.USERINTERACTIONS.DATA.PDB" Name="MagiZile.UserInteractions.Data.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UserInteractions.Data.pdb" />
+                </Component>
+                <Component Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.DLL" DiskId="1" Guid="0161756C-9D68-484D-B2C4-92C598AEA416">
+                    <File Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.DLL" Name="MagiZile.UserInteractions.ParentalControls.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UserInteractions.ParentalControls.dll" />
+                </Component>
+                <Component Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.PDB" DiskId="1" Guid="A5035589-5DC6-4D88-823D-8F7562461238">
+                    <File Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.PDB" Name="MagiZile.UserInteractions.ParentalControls.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UserInteractions.ParentalControls.pdb" />
+                </Component>
+                <Component Id="MAGIZILE.UTILITYCOMPONENTS.DLL" DiskId="1" Guid="7E1C2B82-B261-4BEB-B93F-0AF6BF9C68CB">
+                    <File Id="MAGIZILE.UTILITYCOMPONENTS.DLL" Name="MagiZile.UtilityComponents.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UtilityComponents.dll" />
+                </Component>
+                <Component Id="MAGIZILE.UTILITYCOMPONENTS.PDB" DiskId="1" Guid="DDE8A33F-8C10-42C3-8A9E-E0B83F4E65F7">
+                    <File Id="MAGIZILE.UTILITYCOMPONENTS.PDB" Name="MagiZile.UtilityComponents.pdb" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MagiZile.UtilityComponents.pdb" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.DLL" DiskId="1" Guid="2669BB53-9641-4625-8DA3-2E2E4B798F4E">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.DLL" Name="Microsoft.WindowsAPICodePack.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.dll" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.DLL" DiskId="1" Guid="19FA0685-4A4B-4FD0-8566-81EDADF4AFE5">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.DLL" Name="Microsoft.WindowsAPICodePack.Shell.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.XML" DiskId="1" Guid="43544BA6-5FF0-41C9-B34B-10B88EC64B43">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.XML" Name="Microsoft.WindowsAPICodePack.Shell.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.DLL" DiskId="1" Guid="865CE9A1-E132-48DC-8169-4BFD57D2CD27">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.DLL" Name="Microsoft.WindowsAPICodePack.ShellExtensions.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.XML" DiskId="1" Guid="BC4F107B-1E61-4F0A-BA4F-89D124780EEC">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.XML" Name="Microsoft.WindowsAPICodePack.ShellExtensions.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.xml" />
+                </Component>
+                <Component Id="MICROSOFT.WINDOWSAPICODEPACK.XML" DiskId="1" Guid="4C23E1C7-9B63-45B7-9A72-A6262F724C81">
+                    <File Id="MICROSOFT.WINDOWSAPICODEPACK.XML" Name="Microsoft.WindowsAPICodePack.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Microsoft.WindowsAPICodePack.xml" />
+                </Component>
+                <Component Id="MONGOCRYPT.DLL" DiskId="1" Guid="C9A6784A-C4CA-458A-A7D1-4298148A8DEA">
+                    <File Id="MONGOCRYPT.DLL" Name="mongocrypt.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\mongocrypt.dll" />
+                </Component>
+                <Component Id="MONGODB.BSON.DLL" DiskId="1" Guid="B5C0CFD1-4325-496E-8A12-93A0C117183D">
+                    <File Id="MONGODB.BSON.DLL" Name="MongoDB.Bson.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Bson.dll" />
+                </Component>
+                <Component Id="MONGODB.BSON.XML" DiskId="1" Guid="89216D64-377A-414F-98BC-903B07E26CEF">
+                    <File Id="MONGODB.BSON.XML" Name="MongoDB.Bson.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Bson.xml" />
+                </Component>
+                <Component Id="MONGODB.DRIVER.CORE.DLL" DiskId="1" Guid="0E43E717-0C3C-479D-8A71-8E2F5ABD601B">
+                    <File Id="MONGODB.DRIVER.CORE.DLL" Name="MongoDB.Driver.Core.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Driver.Core.dll" />
+                </Component>
+                <Component Id="MONGODB.DRIVER.CORE.XML" DiskId="1" Guid="011CDA09-8DB5-43EE-B708-EF4BA096EEB9">
+                    <File Id="MONGODB.DRIVER.CORE.XML" Name="MongoDB.Driver.Core.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Driver.Core.xml" />
+                </Component>
+                <Component Id="MONGODB.DRIVER.DLL" DiskId="1" Guid="A2EF3C5D-8DD2-471F-8714-16B1AA230419">
+                    <File Id="MONGODB.DRIVER.DLL" Name="MongoDB.Driver.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Driver.dll" />
+                </Component>
+                <Component Id="MONGODB.DRIVER.XML" DiskId="1" Guid="08727376-060E-4054-89BA-9B5268398777">
+                    <File Id="MONGODB.DRIVER.XML" Name="MongoDB.Driver.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Driver.xml" />
+                </Component>
+                <Component Id="MONGODB.LIBMONGOCRYPT.DLL" DiskId="1" Guid="465261B6-5614-4FC3-97E7-424FAF793BFE">
+                    <File Id="MONGODB.LIBMONGOCRYPT.DLL" Name="MongoDB.Libmongocrypt.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\MongoDB.Libmongocrypt.dll" />
+                </Component>
+                <Component Id="SHARPCOMPRESS.DLL" DiskId="1" Guid="0F413499-5FCD-4EAE-B7B8-527A33D8F738">
+                    <File Id="SHARPCOMPRESS.DLL" Name="SharpCompress.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\SharpCompress.dll" />
+                </Component>
+                <Component Id="SNAPPY.NET.DLL" DiskId="1" Guid="17C2F7E9-6B8A-44EF-B77E-07F12512385C">
+                    <File Id="SNAPPY.NET.DLL" Name="Snappy.NET.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Snappy.NET.dll" />
+                </Component>
+                <Component Id="SNAPPY.NET.XML" DiskId="1" Guid="37D0DE92-6F11-4545-851F-0D691E4E8C30">
+                    <File Id="SNAPPY.NET.XML" Name="Snappy.NET.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\Snappy.NET.xml" />
+                </Component>
+                <Component Id="SNAPPY32.DLL" DiskId="1" Guid="D1B66422-84A6-40EE-9005-05AF8AA84DAF">
+                    <File Id="SNAPPY32.DLL" Name="snappy32.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\snappy32.dll" />
+                </Component>
+                <Component Id="SNAPPY64.DLL" DiskId="1" Guid="96F19352-25AF-43B4-9AF9-FE2C4C15CC52">
+                    <File Id="SNAPPY64.DLL" Name="snappy64.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\snappy64.dll" />
+                </Component>
+                <Component Id="SYSTEM.BUFFERS.DLL" DiskId="1" Guid="2A109693-E61F-49F5-9C08-DB8B7F2AFA6C">
+                    <File Id="SYSTEM.BUFFERS.DLL" Name="System.Buffers.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\System.Buffers.dll" />
+                </Component>
+                <Component Id="SYSTEM.BUFFERS.XML" DiskId="1" Guid="DB482336-2542-49E3-9658-EB3E203C7E8E">
+                    <File Id="SYSTEM.BUFFERS.XML" Name="System.Buffers.xml" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\System.Buffers.xml" />
+                </Component>
+                <Directory Id="ES_MX" Name="es-MX">
+                    <Component Id="MAGIZILE.CUSTOMUI.RESOURCES.DLL" DiskId="1" Guid="EB7AE54F-8D00-4D82-B094-8B838C236B93">
+                        <File Id="MAGIZILE.CUSTOMUI.RESOURCES.DLL" Name="MagiZile.CustomUI.resources.dll" Source="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\es-MX\MagiZile.CustomUI.resources.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="DesktopFolder" />
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuDir" Name="Acadiverse">
+                    <Component Id="StartMenuShortcuts" Guid="17DDE36F-9468-4982-A1F8-DE7979BD04B7">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" />
+                        <Shortcut Id="UninstallProduct" Name="Uninstall Acadiverse" Description="Uninstalls the application" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+                        <util:InternetShortcut Id="WebsiteShortcut" Name="Acadiverse Website" Target="http://acadiverse.magizile.com" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="ACADIVERSE_LESSON_STUDIO.EXE" />
+            <ComponentRef Id="ACADIVERSE_LESSON_STUDIO.EXE.CONFIG" />
+            <ComponentRef Id="ACADIVERSE_LESSON_STUDIO.PDB" />
+            <ComponentRef Id="ACADIVERSEDESKTOP.EXE" />
+            <ComponentRef Id="ACADIVERSEDESKTOP.EXE.CONFIG" />
+            <ComponentRef Id="ACADIVERSEDESKTOP.PDB" />
+            <ComponentRef Id="CRC32C.NET.DLL" />
+            <ComponentRef Id="CRC32C.NET.XML" />
+            <ComponentRef Id="DNSCLIENT.DLL" />
+            <ComponentRef Id="DNSCLIENT.XML" />
+            <ComponentRef Id="LIBZSTD.DLL" />
+            <ComponentRef Id="MAGIZILE.ACADIVERSE.DLL" />
+            <ComponentRef Id="MAGIZILE.ACADIVERSE.PDB" />
+            <ComponentRef Id="MAGIZILE.ADDONS.DLL" />
+            <ComponentRef Id="MAGIZILE.ADDONS.PDB" />
+            <ComponentRef Id="MAGIZILE.CUSTOMUI.DLL" />
+            <ComponentRef Id="MAGIZILE.CUSTOMUI.PDB" />
+            <ComponentRef Id="MAGIZILE.USERINTERACTIONS.DATA.DLL" />
+            <ComponentRef Id="MAGIZILE.USERINTERACTIONS.DATA.PDB" />
+            <ComponentRef Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.DLL" />
+            <ComponentRef Id="MAGIZILE.USERINTERACTIONS.PARENTALCONTROLS.PDB" />
+            <ComponentRef Id="MAGIZILE.UTILITYCOMPONENTS.DLL" />
+            <ComponentRef Id="MAGIZILE.UTILITYCOMPONENTS.PDB" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.DLL" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.DLL" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.SHELL.XML" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.DLL" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.SHELLEXTENSIONS.XML" />
+            <ComponentRef Id="MICROSOFT.WINDOWSAPICODEPACK.XML" />
+            <ComponentRef Id="MONGOCRYPT.DLL" />
+            <ComponentRef Id="MONGODB.BSON.DLL" />
+            <ComponentRef Id="MONGODB.BSON.XML" />
+            <ComponentRef Id="MONGODB.DRIVER.CORE.DLL" />
+            <ComponentRef Id="MONGODB.DRIVER.CORE.XML" />
+            <ComponentRef Id="MONGODB.DRIVER.DLL" />
+            <ComponentRef Id="MONGODB.DRIVER.XML" />
+            <ComponentRef Id="MONGODB.LIBMONGOCRYPT.DLL" />
+            <ComponentRef Id="SHARPCOMPRESS.DLL" />
+            <ComponentRef Id="SNAPPY.NET.DLL" />
+            <ComponentRef Id="SNAPPY.NET.XML" />
+            <ComponentRef Id="SNAPPY32.DLL" />
+            <ComponentRef Id="SNAPPY64.DLL" />
+            <ComponentRef Id="SYSTEM.BUFFERS.DLL" />
+            <ComponentRef Id="SYSTEM.BUFFERS.XML" />
+            <ComponentRef Id="MAGIZILE.CUSTOMUI.RESOURCES.DLL" />
+            <ComponentRef Id="StartMenuShortcuts" />
+        </Feature>
+        <UI>
+        </UI>
+        <UIRef Id="WixUI_FeatureTree" />
+        <PropertyRef Id="NETFRAMEWORK35" />
+        <Condition Message="This application requires .NET Framework X.Y.">Installed OR NETFRAMEWORK35</Condition>
+        <Icon Id="DesktopIcon.exe" SourceFile="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\AcadiverseDesktop.exe" />
+        <Icon Id="StartMenuIcon.exe" SourceFile="Users\bradley\Documents\Important Documents\Development\Visual Studio\Projects\Acadiverse\Acadiverse Desktop Client For Windows\bin\Release\AcadiverseDesktop.exe" />
+    </Product>
+</Wix>
