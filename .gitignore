@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Files containing secret information such as connection strings and encryption passphrases
+Globals.cs
+env_vars.yaml
