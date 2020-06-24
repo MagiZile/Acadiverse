@@ -338,7 +338,11 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+<<<<<<< Updated upstream
 
 # Files containing secret information such as connection strings and encryption passphrases
 Globals.cs
 env_vars.yaml
+=======
+MagiZile.Acadiverse/Globals.cs
+>>>>>>> Stashed changes
