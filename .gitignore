@@ -338,4 +338,21 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+<<<<<<< HEAD
 windows-desktop/MagiZile.Acadiverse/Globals.cs
+=======
+<<<<<<< HEAD
+install.wxs
+install.nsi
+install.wixobj
+=======
+<<<<<<< Updated upstream
+
+# Files containing secret information such as connection strings and encryption passphrases
+Globals.cs
+env_vars.yaml
+=======
+MagiZile.Acadiverse/Globals.cs
+>>>>>>> Stashed changes
+>>>>>>> 8410575e2966f83e56084efda06349d874c9181f
+>>>>>>> f991bae66f3cdcdf43e5f1bd30dc21ebfa15c927
