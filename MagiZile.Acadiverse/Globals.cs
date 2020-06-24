@@ -17,10 +17,10 @@ namespace MagiZile.Acadiverse
         /// <summary>
         /// The MongoDb connection string. NOTE: WHEN POSTING ON GITHUB, THE STRING MUST BE REPLACED WITH "HIDDEN"!
         ///</summary>
-        public const string CONNECTION_STRING = "mongodb+srv://admin:o5b8NeDcgO9yF9jn@acadiverse.axveq.gcp.mongodb.net/acadiverse?retryWrites=true&w=majority";
+        public const string CONNECTION_STRING = "HIDDEN";
 
         //NOTE: WHEN POSTING CODE TO GITHUB, THE VALUE MUST BE REPLACED WITH "HIDDEN"!
-        private const string PASSPHRASE = "g438v364gv349G#$G#$GFDeg";
+        private const string PASSPHRASE = "HIDDEN";     
 
         // 32 bytes long.  Using a 16 character string here gives us 32 bytes when converted to a byte array.
         private const string INIT_VECTOR = "pemgail9uzpgzl88";
