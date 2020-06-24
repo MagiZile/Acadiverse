@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MagiZile.CustomUI.GridControlItemMap" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GridControlItemMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.FileExplorer" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileExplorer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.FileSelectorControl" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BJ8AIlkIAqFIMAmKACHgPAMChVqBAJCUlTXkgLCN4RA=</HashCode>
+      <FileName>FileSelectorControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.GridControl" Collapsed="true">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAAAQAQACAQAACAEBAAAAAQAAIAAAAACA=</HashCode>
+      <FileName>GridControl.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GridControlItemMap" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagiZile.CustomUI.NameEntry" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAACAAAIAAEASIAQgCAABABAAAAAAgAIAAAAA=</HashCode>
+      <FileName>NameEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PersonName" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagiZile.CustomUI.PINEntry" Collapsed="true">
+    <Position X="12.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAAPA/ACAgAAAAAICAAAACBAGAAAACAAAACAAw8A8=</HashCode>
+      <FileName>PINEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.SymbolGrid" Collapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAABigEBAAQkACAQAkCAAQAQEAgAAAQggAAIAE=</HashCode>
+      <FileName>SymbolGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.TabbedDocuments" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>e+5nQu9aPvcCMwH/HfG+TS+ev/pbWK3lV68rcmFpgfM=</HashCode>
+      <FileName>TabbedDocuments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.Timeline" Collapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAsAAAAACAQAAAQQACAAAAiAgSCAQIAAQAmAEAgIAA=</HashCode>
+      <FileName>Timeline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.Customization.LookNFeel" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAIJAAACAAAAAAAAAAAAAAAAAABAAAAAAAEAA=</HashCode>
+      <FileName>Customization\LookNFeel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IconSet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagiZile.CustomUI.Customization.IconSet" Collapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAYAAAAIBAAAAAAAAAAAABAAAAAAAIKAAEgAAABAAA=</HashCode>
+      <FileName>Customization\IconSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.HierarchyNode" Collapsed="true">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEAQAABiIAAQgGAACABAACAAAQAAAAAACAAAIAAQQ=</HashCode>
+      <FileName>HierarchyNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.HierarchyBrowser" Collapsed="true">
+    <Position X="14" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HierarchyBrowser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.HierarchyNodeValue" Collapsed="true">
+    <Position X="17" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACIAEJCAAACAAAACAAABAAAAAAIAAAAAgAQ=</HashCode>
+      <FileName>HierarchyNodeValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.EnhancedFileSelector" Collapsed="true">
+    <Position X="18.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAKBAAAEAAACAAEACAAAAAAAAAAAEEIAAQAA=</HashCode>
+      <FileName>EnhancedFileSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.EnhancedPrintPreview" Collapsed="true">
+    <Position X="20" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAIAAACABAAABAACQAIADABIIAEAAAQAgAAAAAIA=</HashCode>
+      <FileName>EnhancedPrintPreview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagiZile.CustomUI.CustomTitleBar" Collapsed="true">
+    <Position X="21.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEAAgAACAAAASAAAAQAIAAIAABAABAAA=</HashCode>
+      <FileName>CustomTitleBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MagiZile.CustomUI.PersonName" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAEAAAAAAAAAAJAAAAAAAAAAAwA=</HashCode>
+      <FileName>PersonName.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

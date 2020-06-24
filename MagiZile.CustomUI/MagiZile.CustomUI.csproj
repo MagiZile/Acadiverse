@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35FCD604-378E-4E56-913D-F8632ABCC328}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagiZile.CustomUI</RootNamespace>
+    <AssemblyName>MagiZile.CustomUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeView.Designer.cs">
+      <DependentUpon>CodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customization\GUISkin.cs" />
+    <Compile Include="Customization\WindowLayout.cs" />
+    <Compile Include="DigitalTimeDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalTimeDisplay.Designer.cs">
+      <DependentUpon>DigitalTimeDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnhancedFileSelection\FileOperation.cs" />
+    <Compile Include="EnhancedFileSelection\FileOperationType.cs" />
+    <Compile Include="GridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridControl.Designer.cs">
+      <DependentUpon>GridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridControlItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridControlItem.Designer.cs">
+      <DependentUpon>GridControlItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeNumericValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NodeNumericValue.Designer.cs">
+      <DependentUpon>NodeNumericValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeTextValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NodeTextValue.Designer.cs">
+      <DependentUpon>NodeTextValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EnhancedFileSelection\frmFileOperationProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedFileSelection\frmFileOperationProgress.Designer.cs">
+      <DependentUpon>frmFileOperationProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnhancedPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedPrintDialog.Designer.cs">
+      <DependentUpon>EnhancedPrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSelectorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSelectorControl.Designer.cs">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetMoreStyles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetMoreStyles.Designer.cs">
+      <DependentUpon>frmGetMoreStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStyleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStyleInfo.Designer.cs">
+      <DependentUpon>frmStyleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridControlItemMap.cs" />
+    <Compile Include="EnhancedFileSelection\frmNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedFileSelection\frmNewFolder.Designer.cs">
+      <DependentUpon>frmNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnhancedFileSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedFileSelector.Designer.cs">
+      <DependentUpon>EnhancedFileSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnhancedPrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedPrintPreview.Designer.cs">
+      <DependentUpon>EnhancedPrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileExplorer.cs" />
+    <Compile Include="Customization\IconSet.cs" />
+    <Compile Include="HierarchyNodeValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HierarchyNodeValue.Designer.cs">
+      <DependentUpon>HierarchyNodeValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchyBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HierarchyBrowser.Designer.cs">
+      <DependentUpon>HierarchyBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchyNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HierarchyNode.Designer.cs">
+      <DependentUpon>HierarchyNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonName.cs" />
+    <Compile Include="PromptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromptDialog.Designer.cs">
+      <DependentUpon>PromptDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnhancedMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnhancedMessageBox.designer.cs">
+      <DependentUpon>EnhancedMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customization\LookNFeel.cs" />
+    <Compile Include="NameEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NameEntry.Designer.cs">
+      <DependentUpon>NameEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PINEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PINEntry.Designer.cs">
+      <DependentUpon>PINEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SymbolGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SymbolGrid.Designer.cs">
+      <DependentUpon>SymbolGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskProgressEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskProgressEntry.Designer.cs">
+      <DependentUpon>TaskProgressEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskProgressEntryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskProgressEntryList.Designer.cs">
+      <DependentUpon>TaskProgressEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Timeline.Designer.cs">
+      <DependentUpon>Timeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTitleBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTitleBar.Designer.cs">
+      <DependentUpon>CustomTitleBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeView.resx">
+      <DependentUpon>CodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomTitleBar.resx">
+      <DependentUpon>CustomTitleBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitalTimeDisplay.resx">
+      <DependentUpon>DigitalTimeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedFileSelection\frmFileOperationProgress.resx">
+      <DependentUpon>frmFileOperationProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedFileSelection\frmNewFolder.resx">
+      <DependentUpon>frmNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedFileSelector.resx">
+      <DependentUpon>EnhancedFileSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedPrintDialog.resx">
+      <DependentUpon>EnhancedPrintDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedPrintPreview.resx">
+      <DependentUpon>EnhancedPrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetMoreStyles.resx">
+      <DependentUpon>frmGetMoreStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStyleInfo.resx">
+      <DependentUpon>frmStyleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridControl.resx">
+      <DependentUpon>GridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridControlItem.resx">
+      <DependentUpon>GridControlItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeNumericValue.resx">
+      <DependentUpon>NodeNumericValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeTextValue.resx">
+      <DependentUpon>NodeTextValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HierarchyNodeValue.resx">
+      <DependentUpon>HierarchyNodeValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HierarchyBrowser.resx">
+      <DependentUpon>HierarchyBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HierarchyNode.resx">
+      <DependentUpon>HierarchyNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromptDialog.resx">
+      <DependentUpon>PromptDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SymbolGrid.es-MX.resx">
+      <DependentUpon>SymbolGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnhancedMessageBox.resx">
+      <DependentUpon>EnhancedMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameEntry.resx">
+      <DependentUpon>NameEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PINEntry.resx">
+      <DependentUpon>PINEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SymbolGrid.resx">
+      <DependentUpon>SymbolGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskProgressEntry.resx">
+      <DependentUpon>TaskProgressEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskProgressEntryList.resx">
+      <DependentUpon>TaskProgressEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timeline.resx">
+      <DependentUpon>Timeline.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomUIDiagram.cd" />
+    <None Include="Resources\ico_folder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_go_up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_other_file.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_document.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_audio.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_music.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_video.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_application.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_markup_file.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_code_file.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_disk_drive.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_folder_open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_search.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_backspace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_enter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_restore.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_rearrange_up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_rearrange_down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_printer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_printer_default.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ico_back.bmp" />
+    <Content Include="Resources\ico_forward.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MagiZile.UtilityComponents\MagiZile.UtilityComponents.csproj">
+      <Project>{60464e11-b309-4cd5-80fd-c94fcdbc4eb4}</Project>
+      <Name>MagiZile.UtilityComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
