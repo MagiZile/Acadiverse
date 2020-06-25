@@ -71,7 +71,7 @@ namespace MagiZile.Acadiverse
                     {"last_updated", DateTime.Now },
                     {"number_of_votes", NumberOfVotes },
                     {"comments", Comments },
-                    {"submission_contents", Globals.EncryptString(SubmissionContents) },
+                    {"submission_contents", SubmissionContents },
                     {"tags", Tags }
                 };
             }

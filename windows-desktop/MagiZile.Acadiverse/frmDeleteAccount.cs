@@ -23,7 +23,7 @@ namespace MagiZile.Acadiverse
         {
             if(Globals.ShowConfirmationMessage("Are you really sure you wish to delete your account and all associated data?", true))
             {
-                if (txtPassword.Text == Globals.DecryptString(account.Password))
+                if (Globals.CorrectPassword(txtPassword.Text, account.Password))
                 {
                     DialogResult = DialogResult.OK;
                     Close();

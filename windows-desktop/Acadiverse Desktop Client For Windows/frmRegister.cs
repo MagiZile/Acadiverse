@@ -139,7 +139,7 @@ namespace AcadiverseDesktop
                                             Account account = new Account
                                             {
                                                 Username = txtUsername.Text,
-                                                Password = Globals.EncryptString(txtPassword.Text)
+                                                Password = Globals.SaltedPassword(txtPassword.Text)
                                             };
                                             if (rbtParent.Checked)
                                             {

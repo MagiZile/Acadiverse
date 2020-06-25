@@ -31,14 +31,14 @@ namespace Acadiverse_Lesson_Studio
             }
             else
             {
-                if (args[0] != Globals.DecryptString("KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls="))
+                if (Globals.CorrectPassword(args[0], "KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls="))
                 {
                     Console.WriteLine("Acadiverse Lesson Studio must be run from the Acadiverse Launcher.");
                 }
                 else
                 {
                     Account account = Account.LoadFromServer(args[1]);
-                    if (!(account.Password == Globals.EncryptString(args[2])))
+                    if (!(account.Password == Globals.SaltedPassword(args[2])))
                     {
                         Console.WriteLine("The password you entered was incorrect.");
                     }

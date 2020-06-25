@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagiZile.UtilityComponents"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acadiverse Admin Panel", "Acadiverse Admin Panel\Acadiverse Admin Panel.csproj", "{10C6DB65-D2DA-4501-8511-79DBD285C5A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acadiverse Desktop Client", "Acadiverse Desktop Client\Acadiverse Desktop Client.csproj", "{B979B4DF-15A1-4714-BE73-594192D05C98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,26 @@ Global
 		{10C6DB65-D2DA-4501-8511-79DBD285C5A5}.Release|x64.Build.0 = Release|Any CPU
 		{10C6DB65-D2DA-4501-8511-79DBD285C5A5}.Release|x86.ActiveCfg = Release|Any CPU
 		{10C6DB65-D2DA-4501-8511-79DBD285C5A5}.Release|x86.Build.0 = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|x64.Build.0 = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Debug|x86.Build.0 = Debug|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|ARM.Build.0 = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|ARM64.Build.0 = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|x64.ActiveCfg = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|x64.Build.0 = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|x86.ActiveCfg = Release|Any CPU
+		{B979B4DF-15A1-4714-BE73-594192D05C98}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

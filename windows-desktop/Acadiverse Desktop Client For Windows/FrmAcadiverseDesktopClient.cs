@@ -209,7 +209,7 @@ namespace AcadiverseDesktop
         {
             if (currentAccount.AccountType == AcadiverseAccountType.Teacher)
             {
-                System.Diagnostics.Process.Start("Acadiverse Lesson Studio.exe ", Globals.DecryptString("KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls=") + " " + currentAccount.Username + " " + Globals.DecryptString(currentAccount.Password));
+                System.Diagnostics.Process.Start("Acadiverse Lesson Studio.exe ", Globals.CorrectPassword("lnc_234322854942374932423", "KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls=") + " " + currentAccount.Username + " " + currentAccount.Password);
             }
             else
             {
@@ -221,7 +221,7 @@ namespace AcadiverseDesktop
         {
             try
             {
-                System.Diagnostics.Process.Start("Acadiverse.exe", currentAccount.Username + " " + currentAccount.Password + Globals.DecryptString("KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls=") + "_" + Application.ProductVersion.GetHashCode());
+                System.Diagnostics.Process.Start("Acadiverse.exe", currentAccount.Username + " " + currentAccount.Password + Globals.CorrectPassword("lnc_234322854942374932423", "KmkZMDPtDzT2whOKbaTFWAkHBQbzixRIEJ7LPJQC3ls=") + "_" + Application.ProductVersion.GetHashCode());
             }
             catch (Win32Exception)
             {

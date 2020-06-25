@@ -29,7 +29,7 @@ namespace Acadiverse_Admin_Panel
                 }
                 else
                 {
-                    if (account.Password != Globals.EncryptString(args[1]))
+                    if (Globals.CorrectPassword(args[1], account.Password))
                     {
                         Console.WriteLine("Incorrect password.");
                     }

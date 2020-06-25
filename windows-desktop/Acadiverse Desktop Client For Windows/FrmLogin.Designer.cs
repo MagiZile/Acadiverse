@@ -35,7 +35,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lnkForgotPAssword = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.chkKeepUserLoggedIn = new System.Windows.Forms.CheckBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -75,12 +74,6 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // chkKeepUserLoggedIn
-            // 
-            resources.ApplyResources(this.chkKeepUserLoggedIn, "chkKeepUserLoggedIn");
-            this.chkKeepUserLoggedIn.Name = "chkKeepUserLoggedIn";
-            this.chkKeepUserLoggedIn.UseVisualStyleBackColor = true;
-            // 
             // lblLogin
             // 
             resources.ApplyResources(this.lblLogin, "lblLogin");
@@ -98,7 +91,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.chkKeepUserLoggedIn);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lnkForgotPAssword);
             this.Controls.Add(this.txtPassword);
@@ -123,7 +115,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel lnkForgotPAssword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.CheckBox chkKeepUserLoggedIn;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnRegister;
     }

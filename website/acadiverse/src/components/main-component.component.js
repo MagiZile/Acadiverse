@@ -12,7 +12,7 @@ export default class MainComponent extends Component {
         return (
             <Container fluid>
                 <NavigationBar activeItem="" />
-                <h1 style={fontSize: 100>
+                <h1>
                     No more boredom in class.
                 </h1>
                 <Footer />
