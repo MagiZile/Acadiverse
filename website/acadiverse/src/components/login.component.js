@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import AdBlockDetect from 'react-ad-block-detect';
 import { withRouter } from 'react-router-dom';
 import { Button, Menu, Advertisement, Container, Form, Checkbox } from 'semantic-ui-react';
+
+import '../index.css';
+
 export default class LoginForm extends Component {
     state = {}
 
@@ -12,7 +15,7 @@ export default class LoginForm extends Component {
 
     render() {
         return (
-            <Form>
+            <Form id="modal">
                 <Form.Field>
                     <label>Username</label>
                     <input placeholder="enter your Acadiverse username." />

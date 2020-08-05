@@ -44,7 +44,7 @@ namespace MagiZile.Acadiverse
 
         public static bool IsSpam(Submission submission)
         {
-            return CheckForSpam(submission.Name) || CheckForSpam(submission.Description) || CheckForSpam(submission.Tags) || CheckForSpam(submission.SubmissionContents);
+            return CheckForSpam(submission.Name) || CheckForSpam(submission.Description) || CheckForSpam(submission.Tags.AsString) || CheckForSpam(submission.SubmissionContents);
         }
     }
 }

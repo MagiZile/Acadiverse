@@ -1,0 +1,17 @@
+﻿<Window x:Name="UpdatesAvailableWindow1" x:Class="MagiZile.Acadiverse.UpdatesAvailableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagiZile.Acadiverse"
+        mc:Ignorable="d"
+        Title="Updates Available" Height="351" Width="299"
+        Loaded="UpdatesAvailableWindow1_Loaded" ResizeMode="NoResize">
+
+    <Grid>
+        <TextBox x:Name="txtChangeLog" Margin="0,31,0,36" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch"/>
+        <Label x:Name="lblUpdatesAvailable" Content="Updates for Acadiverse Desktop Client are available." HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="291"/>
+        <Button x:Name="btnInstallUpdates" Content="Install Updates" HorizontalAlignment="Left" Margin="10,296,0,0" VerticalAlignment="Top" Width="121" Click="btnInstallUpdates_Click"/>
+        <Button x:Name="btnRemindMeLater" Content="Remind Me Later" HorizontalAlignment="Left" Margin="160,296,0,0" VerticalAlignment="Top" Width="121" Click="btnRemindMeLater_Click"/>
+    </Grid>
+</Window>

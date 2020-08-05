@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
 using System.Xml;
 
 namespace MagiZile.CustomUI.Customization
@@ -12,20 +12,27 @@ namespace MagiZile.CustomUI.Customization
     {
         readonly Dictionary<string, bool> visibleDialogs = new Dictionary<string, bool>();
 
-        public WindowLayout(Dictionary<string, bool> dialogVisibilityDefaults, Form window)
+        public WindowLayout(Dictionary<string, bool> dialogVisibilityDefaults, Window window)
         {
 
             visibleDialogs = dialogVisibilityDefaults;
             for (int i = 0; i < visibleDialogs.Count; i++)
             {
-                if (window.OwnedForms[i].Name == visibleDialogs.Keys.ToList<string>()[i])
+                if (window.OwnedWindows[i].Name == visibleDialogs.Keys.ToList<string>()[i])
                 {
-                    window.OwnedForms[i].Visible = visibleDialogs.Values.ToList<bool>()[i];
+                    if (visibleDialogs.Values.ToList()[i] == true)
+                    {
+                        window.OwnedWindows[i].Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        window.OwnedWindows[i].Visibility = Visibility.Hidden;
+                    }
                 }
             }
         }
 
-        public static WindowLayout Load(string path, Form window)
+        public static WindowLayout Load(string path, Window window)
         {
             Dictionary<string, bool> visibleWindows = new Dictionary<string, bool>();
             XmlReader objFile = XmlReader.Create(path);

@@ -78,7 +78,7 @@ namespace Acadiverse_Lesson_Studio
         public static int LockoutDuration = 6;
 
         /// <summary>
-        /// The password used to unlock Acadiverse Lesson Studio. This password is encrypted using the same password/algorithm that is used to encrypt account passwords.
+        /// The password used to unlock Acadiverse Lesson Studio. This password is "salted" (hashed) using the same algorithm that is used to "salt" (hash) account passwords.
         /// </summary>
         public static string Password = "";
 
@@ -100,7 +100,7 @@ namespace Acadiverse_Lesson_Studio
         public static int DaysToBackupDeletion = 14;
 
         /// <summary>
-        /// If true, backups will be synced to the user's Acadiverse account and encrypted with the same password/algorithm that is used to encrypt users' passwords.
+        /// If true, backups will be synced to the user's Acadiverse account.
         /// </summary>
         public static bool SyncBackups = true;
 

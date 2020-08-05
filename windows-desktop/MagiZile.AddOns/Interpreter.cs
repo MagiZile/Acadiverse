@@ -4,12 +4,55 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace MagiZile.AddOns
 {
     public static class Interpreter
     {
+        /// <summary>
+        /// This is used to be able to access the currently-active WPF window.
+        /// </summary>
+        public static Window activeWindow;
+
+        public static UIElementCollection GetAllActiveWindowControls()
+        {
+            Grid grid = (Grid)(activeWindow.Content);
+            return grid.Children;
+        }
+
+        #region InterpreterMethods
+        //These methods are called when the interpreter detects them in a script.
+        public static object GetPropFromProgram(string name)
+        {
+            switch (name)
+            {
+                case "worksheetTextField.selection":
+                    foreach (Control ctl in GetAllActiveWindowControls())
+                    {
+                        if (ctl.GetType() == typeof(TabControl))
+                        {
+                            TabItem selectedTabItem = (TabItem)((TabControl)ctl).SelectedItem);
+                            if (selectedTabItem.Content.GetType() == typeof(UserControl))
+                            {
+                                Grid grid = (Grid)((UserControl)(selectedTabItem.Content)).Content;
+                                foreach (Control control in grid.Children)
+                                {
+                                    if (control.GetType() == typeof(RichTextBox))
+                                    {
+                                        return ((RichTextBox)control).Selection.Text;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    break;
+            }
+            return null;
+        }
+        #endregion
+
         /// <summary>
         /// Copies the specified package's scripts.
         /// </summary>
@@ -36,7 +79,7 @@ namespace MagiZile.AddOns
         /// Checks a script for syntax errors.
         /// </summary>
         /// <param name="script">The script to check.</param>
-        /// <returns>Whether or not the script is a valid MgiZile Add-Ons Language program.</returns>
+        /// <returns>Whether or not the script is a valid MagiZile Add-Ons Language program.</returns>
         public static bool ValidSyntax(string script)
         {
             StreamReader objScript = new StreamReader(script);
@@ -49,7 +92,7 @@ namespace MagiZile.AddOns
                 string strippedComments = "";
                 foreach (string statement in statements)
                 {
-                    if (statement.Contains("***") == false)
+                    if (statement.Contains("-***") == false)
                     {
                         strippedComments += statement;
                     }
@@ -88,7 +131,7 @@ namespace MagiZile.AddOns
         /// <param name="errorCode">The error code.</param>
         public static void RaiseError(string errorText, int errorCode)
         {
-            MessageBox.Show("Error " + errorCode + ": " + errorText, "Script Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Error " + errorCode + ": " + errorText, "Script Error", MessageBoxButton.OK, MessageBoxImage.Error);
             throw (new Exception("Error " + errorCode + ": " + errorText));
         }
 
@@ -121,7 +164,7 @@ namespace MagiZile.AddOns
                     message = "Could not create menu from \"" + context + "\". The file may be corrupted or damaged.";
                     break;
             }
-            MessageBox.Show("Error " + errorCode + ": " + message, "Script Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Error " + errorCode + ": " + message, "Script Error", MessageBoxButton.OK, MessageBoxImage.Error);
             throw (new Exception("Error " + errorCode + ": " + message));
         }
     }

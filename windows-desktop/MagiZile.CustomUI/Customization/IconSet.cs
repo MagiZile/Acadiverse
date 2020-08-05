@@ -14,7 +14,7 @@ namespace MagiZile.CustomUI.Customization
         List<Image> icons = new List<Image>();
         public Form window = null;
 
-        public IconSet(Form window)
+        public IconSet(Window window)
         {
             this.window = window;
             GetIconsFromForm(window);

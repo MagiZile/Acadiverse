@@ -46,7 +46,7 @@ namespace MagiZile.Acadiverse
         int chatStrikes = 0;
         int publishingStrikes = 0;
         int warnings = 0;
-        
+
         int gradeLevel = 0;
         BsonArray buddies = new BsonArray();
         bool notifySubmissionComment = true;
@@ -85,14 +85,7 @@ namespace MagiZile.Acadiverse
             }
             set
             {
-                if (AccountExists(value))
-                {
-                    throw new ArgumentException("This username is already in use.");
-                }
-                else
-                {
-                    username = value;
-                }
+                username = value;
             }
         }
 
@@ -210,27 +203,27 @@ namespace MagiZile.Acadiverse
         /// Whether or not the user should be notified if someoone else commonts on one of their submissions.
         /// </summary>
         public bool NotifySubmissionComment { get => notifySubmissionComment; set => notifySubmissionComment = value; }
-        
+
         /// <summary>
         /// Whether or not the user should be notified if someone else upvotes one of their submissions.
         /// </summary>
         public bool NotifySubmissionUpvote { get => notifySubmissionUpvote; set => notifySubmissionUpvote = value; }
-        
+
         /// <summary>
         /// Whether or not the user should be notified if one of their submissions gets featured.
         /// </summary>
         public bool NotifySubmissionFeatured { get => notifySubmissionFeatured; set => notifySubmissionFeatured = value; }
-        
+
         /// <summary>
         /// Whether or not the user should be notified if they have received an achievement.
         /// </summary>
         public bool NotifyAchievementReceived { get => notifyAchievementReceived; set => notifyAchievementReceived = value; }
-        
+
         /// <summary>
         /// Whether or not the user should be notified if they have received a PM.
         /// </summary>
         public bool NotifyPMReceived { get => notifyPMReceived; set => notifyPMReceived = value; }
-        
+
         /// <summary>
         /// Whether or not the user should be notified if their username is mentioned ("@username") in chat or in the comments for a submission.
         /// </summary>
@@ -239,32 +232,32 @@ namespace MagiZile.Acadiverse
         /// If false, no users who are not moderators will be able to send this user a PM.
         /// </summary>
         public bool ReceivesPMs { get => receivesPMs; set => receivesPMs = value; }
-        
+
         /// <summary>
         /// If false, nobody can invite this user to be one of their buddies.
         /// </summary>
         public bool AcceptsBuddyInvites { get => acceptsBuddyInvites; set => acceptsBuddyInvites = value; }
-        
+
         /// <summary>
         /// The number of times that the user has received the "[number] Anniversary" achievement.
         /// </summary>
         public int AnniversaryAchievementCount { get => anniversaryAchievementCount; set => anniversaryAchievementCount = value; }
-        
+
         /// <summary>
         /// The number of times that the user has received the "Aced It" achievemet.
         /// </summary>
         public int PerfectQuizScoreAchievementCount { get => perfectQuizScoreAchievementCount; set => perfectQuizScoreAchievementCount = value; }
-        
+
         /// <summary>
         /// The number of times that the user has received the "Top Publisher" achievement.
         /// </summary>
         public int TopPublisherAchievementCount { get => topPublisherAchievementCount; set => topPublisherAchievementCount = value; }
-        
+
         /// <summary>
         /// The user's display name. This is what is shown instead of the username in chat messages, submissions and submission comments, the actual Acadiverse game itself, and the Buddies list.
         /// </summary>
         public string DisplayName { get => displayName; set => displayName = value; }
-        
+
         /// <summary>
         /// An array representing the user's notifications.
         /// </summary>
@@ -454,7 +447,7 @@ namespace MagiZile.Acadiverse
 #pragma warning restore CA1031 // Do not catch general exception types
             catch (TimeoutException)
             {
-                Globals.ShowErrorMessage("The connection timed out. Please check your firewall settings to see if Acadiverse Desktop Client for Windows is blocked. Don't worry; all Acadiverse programs are safe!");
+                Globals.ShowErrorMessage("The connection timed out. Please check your firewall settings to see if Acadiverse Desktop Client is blocked. Don't worry; all Acadiverse programs are safe!");
             }
             return account;
         }
@@ -463,23 +456,21 @@ namespace MagiZile.Acadiverse
         /// </summary>
         public void SaveToServer()
         {
-            try
-            {
-                MongoClient dbclient = new MongoClient(Globals.CONNECTION_STRING);
-                var database = dbclient.GetDatabase("acadiverse");
-                var collection = database.GetCollection<BsonDocument>("accounts");
+            MongoClient dbclient = new MongoClient(Globals.CONNECTION_STRING);
+            var database = dbclient.GetDatabase("acadiverse");
+            var collection = database.GetCollection<BsonDocument>("accounts");
 #pragma warning disable IDE0059 // Unnecessary assignment of a value
-                var filter = Builders<BsonDocument>.Filter.Eq("username", username);
+            var filter = Builders<BsonDocument>.Filter.Eq("username", username);
 #pragma warning restore IDE0059 // Unnecessary assignment of a value
-                if (!AccountExists(username))
-                {
-                    Properties.Resources.img_profile_default.Save("profile.bmp");
-                    StreamReader objImageFile = new StreamReader("profile.bmp");
-                    string profileImageData = objImageFile.ReadToEnd();
-                    objImageFile.Close();
-                    objImageFile.Dispose();
-                    File.Delete("profile.bmp");
-                    var document = new BsonDocument { { "username", Username },
+            if (!AccountExists(username))
+            {
+                Properties.Resources.img_profile_default.Save("profile.bmp");
+                StreamReader objImageFile = new StreamReader("profile.bmp");
+                string profileImageData = objImageFile.ReadToEnd();
+                objImageFile.Close();
+                objImageFile.Dispose();
+                File.Delete("profile.bmp");
+                var document = new BsonDocument { { "username", Username },
                 {"password", Password },
                 {"account_type", AccountType.ToString() },
                 {"reputation_points", new BsonInt32(ReputationPoints) },
@@ -501,7 +492,7 @@ namespace MagiZile.Acadiverse
                 {"publishing_strikes", PublishingStrikes },
                 {"warnings", Warnings },
                 {"notifications", new BsonArray() },
-                {"notify_acieivement_received", NotifyAchievementReceived },
+                {"notify_acheivement_received", NotifyAchievementReceived },
                 {"notify_submission_featured", NotifySubmissionFeatured },
                 {"notify_mentioned", NotifyMentioned },
                 {"notify_submission_comment", NotifySubmissionComment },
@@ -511,64 +502,57 @@ namespace MagiZile.Acadiverse
                 {"blocked_users", new BsonArray() },
                 {"acknowledged_last_warning", true },
                 {"last_warned_by_moderator_name", "" },
-                {"date_last_warning_receieved", new DateTime(0) },
+                {"date_last_warning_received", new DateTime(0) },
                 {"last_warning_reason", LastWarningReason },
-                        {"profile_image_data", profileImageData }
+                {"profile_image_data", profileImageData },
                     };
-                    collection.InsertOne(document);
-                }
-                else
+                collection.InsertOne(document);
+            }
+            else
+            {
+                Globals.UpdateValue("accounts", "username", Username, "username", Username);
+                Globals.UpdateValue("accounts", "username", Username, "password", Password);
+                Globals.UpdateValue("accounts", "username", Username, "account_type", AccountType.ToString());
+                Globals.UpdateValue("accounts", "username", Username, "reputation_points", new BsonInt32(ReputationPoints));
+                Globals.UpdateValue("accounts", "username", Username, "money", new BsonInt32(Money));
+                Globals.UpdateValue("accounts", "username", Username, "account_banned", new BsonBoolean(AccountBanned));
+                Globals.UpdateValue("accounts", "username", Username, "date_ban_expires", new BsonDateTime(dateBanExpires));
+                Globals.UpdateValue("accounts", "username", Username, "ban_reason", BanReason);
+                Globals.UpdateValue("accounts", "username", Username, "is_admin", new BsonBoolean(IsAdmin));
+                Globals.UpdateValue("accounts", "username", Username, "private_messages", PrivateMessages);
+                Globals.UpdateValue("accounts", "username", Username, "can_publish", new BsonBoolean(CanPublish));
+                Globals.UpdateValue("accounts", "username", Username, "can_chat", new BsonBoolean(CanChat));
+                Globals.UpdateValue("accounts", "username", Username, "last_login_date", new BsonDateTime(LastLoginDate));
+                Globals.UpdateValue("accounts", "username", Username, "profile_bio", ProfileBio);
+                Globals.UpdateValue("accounts", "username", Username, "birthday", new BsonDateTime(Birthday));
+                Globals.UpdateValue("accounts", "username", Username, "email", Email);
+                Globals.UpdateValue("accounts", "username", Username, "chat_strikes", ChatStrikes);
+                Globals.UpdateValue("accounts", "username", Username, "publishing_strikes", PublishingStrikes);
+                Globals.UpdateValue("accounts", "username", Username, "warnings", Warnings);
+                Globals.UpdateValue("accounts", "username", Username, "notifications", Notifications);
+                Globals.UpdateValue("accounts", "username", Username, "notify_acheivement_received", NotifyAchievementReceived);
+                Globals.UpdateValue("accounts", "username", Username, "notify_submission_featured", NotifySubmissionFeatured);
+                Globals.UpdateValue("accounts", "username", Username, "notify_mentioned", NotifyMentioned);
+                Globals.UpdateValue("accounts", "username", Username, "notify_submission_comment", NotifySubmissionComment);
+                Globals.UpdateValue("accounts", "username", Username, "notify_submission_upvote", NotifySubmissionUpvote);
+                Globals.UpdateValue("accounts", "username", Username, "notify_pm_received", NotifyPMReceived);
+                Globals.UpdateValue("accounts", "username", Username, "receives_pms", ReceivesPMs);
+                Globals.UpdateValue("accounts", "username", Username, "blocked_users", BlockedUsers);
+                Globals.UpdateValue("accounts", "username", Username, "acknowledged_last_warning", AcknowledgedLastWarning);
+                Globals.UpdateValue("accounts", "username", Username, "last_warned_by_moderator_name", LastWarnedByModeratorName);
+                Globals.UpdateValue("accounts", "username", Username, "date_last_Warning_received", DateLastWarningReceived);
+                Globals.UpdateValue("accounts", "username", Username, "last_warning_reason", LastWarningReason);
+                if (ProfileImage == null)
                 {
-                    Globals.UpdateValue("accounts", "username", Username, "username", Username);
-                    Globals.UpdateValue("accounts", "username", Username, "password", Password);
-                    Globals.UpdateValue("accounts", "username", Username, "account_type", AccountType.ToString());
-                    Globals.UpdateValue("accounts", "username", Username, "reputation_points", new BsonInt32(ReputationPoints));
-                    Globals.UpdateValue("accounts", "username", Username, "money", new BsonInt32(Money));
-                    Globals.UpdateValue("accounts", "username", Username, "account_banned", new BsonBoolean(AccountBanned));
-                    Globals.UpdateValue("accounts", "username", Username, "date_ban_expires", new BsonDateTime(dateBanExpires));
-                    Globals.UpdateValue("accounts", "username", Username, "ban_reason", BanReason);
-                    Globals.UpdateValue("accounts", "username", Username, "is_admin", new BsonBoolean(IsAdmin));
-                    Globals.UpdateValue("accounts", "username", Username, "private_messages", PrivateMessages);
-                    Globals.UpdateValue("accounts", "username", Username, "can_publish", new BsonBoolean(CanPublish));
-                    Globals.UpdateValue("accounts", "username", Username, "can_chat", new BsonBoolean(CanChat));
-                    Globals.UpdateValue("accounts", "username", Username, "last_login_date", new BsonDateTime(LastLoginDate));
-                    Globals.UpdateValue("accounts", "username", Username, "profile_bio", ProfileBio);
-                    Globals.UpdateValue("accounts", "username", Username, "birthday", new BsonDateTime(Birthday));
-                    Globals.UpdateValue("accounts", "username", Username, "email", Email);
-                    Globals.UpdateValue("accounts", "username", Username, "chat_strikes", ChatStrikes);
-                    Globals.UpdateValue("accounts", "username", Username, "publishing_strikes", PublishingStrikes);
-                    Globals.UpdateValue("accounts", "username", Username, "warnings", Warnings);
-                    Globals.UpdateValue("accounts", "username", Username, "notifications", Notifications);
-                    Globals.UpdateValue("accounts", "username", Username, "notify_achievement_received", NotifyAchievementReceived);
-                    Globals.UpdateValue("accounts", "username", Username, "notify_submission_featured", NotifySubmissionFeatured);
-                    Globals.UpdateValue("accounts", "username", Username, "notify_mentioned", NotifyMentioned);
-                    Globals.UpdateValue("accounts", "username", Username, "notify_submission_comment", NotifySubmissionComment);
-                    Globals.UpdateValue("accounts", "username", Username, "notify_submission_upvote", NotifySubmissionUpvote);                 
-                    Globals.UpdateValue("accounts", "username", Username, "notify_pm_received", NotifyPMReceived);
-                    Globals.UpdateValue("accounts", "username", Username, "receives_pms", ReceivesPMs);
-                    Globals.UpdateValue("accounts", "username", Username, "blocked_users", BlockedUsers);
-                    Globals.UpdateValue("accounts", "username", Username, "acknowledged_last_warning", AcknowledgedLastWarning);
-                    Globals.UpdateValue("accounts", "username", Username, "last_warned_by_moderator_name", LastWarnedByModeratorName);
-                    Globals.UpdateValue("accounts", "username", Username, "date_last_Warning_received", DateLastWarningReceived);
-                    Globals.UpdateValue("accounts", "username", Username, "last_warning_reason", LastWarningReason);
-                    ProfileImage.Save("profile.bmp");
-                    StreamReader objImageFile = new StreamReader("profile.bmp");
-                    string profileImageData = objImageFile.ReadToEnd();
-                    objImageFile.Close();
-                    objImageFile.Dispose();
-                    File.Delete("profile.bmp");
-                    Globals.UpdateValue("accounts", "username", Username, "profile_image_data", profileImageData);
+                    ProfileImage = Properties.Resources.img_profile_default;
                 }
-            }
-#pragma warning disable CA1031 // Do not catch general exception types
-            catch (DnsClient.DnsResponseException)
-            {
-                Globals.ShowErrorMessage(Properties.Resources.str_connection_error);
-            }
-#pragma warning restore CA1031 // Do not catch general exception types
-            catch (TimeoutException)
-            {
-                Globals.ShowErrorMessage("The connection timed out. Please check your firewall settings to see if Acadiverse Desktop Client for Windows is blocked. Don't worry; all Acadiverse programs are safe!");
+                ProfileImage.Save("profile.bmp");
+                StreamReader objImageFile = new StreamReader("profile.bmp");
+                string profileImageData = objImageFile.ReadToEnd();
+                objImageFile.Close();
+                objImageFile.Dispose();
+                File.Delete("profile.bmp");
+                Globals.UpdateValue("accounts", "username", Username, "profile_image_data", profileImageData);
             }
         }
 
@@ -601,7 +585,7 @@ namespace MagiZile.Acadiverse
         /// </summary>
         /// <param name="id">The ID to look for.</param>
         /// <returns>True if the account exists, false otherwise.returns>
-public static bool AccountExists(BsonObjectId id)
+        public static bool AccountExists(BsonObjectId id)
         {
             try
             {
@@ -680,7 +664,7 @@ public static bool AccountExists(BsonObjectId id)
                         {"subject", subject },
                         {"message", message },
                         {"date", DateTime.Now } });
-                        sender.SaveToServer();
+                    sender.SaveToServer();
                     recipient.NotifyUser(AcadiverseNotificationType.PMReceived, Properties.Resources.str_notification_pm.Replace("$1", sender.Username));
                 }
                 else

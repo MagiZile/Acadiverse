@@ -1,0 +1,217 @@
+﻿<Window x:Class="Acadiverse_Lesson_Studio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Acadiverse_Lesson_Studio"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="674" Width="1089" WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="34" ResizeBorderThickness="{x:Static SystemParameters.WindowResizeBorderThickness}" />
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <!-- This code is from CodeProject. Some of the attributes were changed to be better tailored to the application. -->
+            <!--Base style for title bar buttons-->
+            <Style x:Key="CaptionButtonStyle" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid x:Name="LayoutRoot" Background="Transparent" Width="44" Height="30">
+                                <TextBlock x:Name="txt" Text="{TemplateBinding Content}" FontFamily="Segoe MDL2 Assets" FontSize="10" 
+                                   Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   RenderOptions.ClearTypeHint="Auto" TextOptions.TextRenderingMode="Aliased"  TextOptions.TextFormattingMode="Display"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="LayoutRoot" Property="Background" Value="#E5E5E5"/>
+                                    <Setter TargetName="txt" Property="Foreground" Value="#000000"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--Minimize-->
+            <Style x:Key="MinimizeButtonStyle" TargetType="Button" BasedOn="{StaticResource CaptionButtonStyle}">
+                <Setter Property="Content" Value="&#xE949;"/>
+            </Style>
+
+            <!--Maximize-->
+            <Style x:Key="MaximizeButtonStyle" TargetType="Button" BasedOn="{StaticResource CaptionButtonStyle}">
+                <Setter Property="Content" Value="&#xE739;"/>
+            </Style>
+
+            <!--Restore-->
+            <Style x:Key="RestoreButtonStyle" TargetType="Button" BasedOn="{StaticResource CaptionButtonStyle}">
+                <Setter Property="Content" Value="&#xE923;"/>
+            </Style>
+
+            <!--Close-->
+            <Style x:Key="CloseButtonStyle" TargetType="Button" BasedOn="{StaticResource CaptionButtonStyle}">
+                <Setter Property="Content" Value="&#xE106;"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!--Title bar button commands-->
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Close" />
+        <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Maximize" />
+        <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Minimize" />
+        <CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Restore" />
+    </Window.CommandBindings>
+
+    <Border x:Name="MainWindowBorder" BorderBrush="LightCoral" BorderThickness="0" >
+        <Grid x:Name="parentContainer">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="Auto"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Window chrome-->
+            <Grid Grid.Row="0" Height="30" Background="White">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!--App icon-->
+                    <Image  Width="18" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <TextBlock Text="Acadiverse Lesson Studio" FontFamily="Arial" Margin="4 3 0 0" />
+                </StackPanel>
+
+                <!--Caption buttons-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Style="{StaticResource MinimizeButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Minimize"
+                            Command="{x:Static SystemCommands.MinimizeWindowCommand}"/>
+                    <Button x:Name="RestoreButton" Visibility="Collapsed" Style="{StaticResource RestoreButtonStyle}" 
+                            Command="{x:Static SystemCommands.RestoreWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Restore"/>
+                    <Button x:Name="MaximizeButton" Visibility="Visible" Style="{StaticResource MaximizeButtonStyle}" 
+                            Command="{x:Static SystemCommands.MaximizeWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Maximize" />
+                    <Button Style="{StaticResource CloseButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Close"
+                            Command="{x:Static SystemCommands.CloseWindowCommand}"/>
+                </StackPanel>
+            </Grid>
+
+            <!--App content-->
+            <Grid Grid.Row="1" x:Name="AppArea">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="540*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Menu x:Name="mnuMain" Height="25" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Background="White" FontSize="16">
+                    <MenuItem x:Name="mnuFile" Header="File">
+                        <MenuItem x:Name="mnuNew" Header="New..." Click="mnuNew_Click"/>
+                        <MenuItem x:Name="mnuOpen" Header="Open..."/>
+                        <Separator x:Name="sep1"/>
+                        <MenuItem x:Name="mnuSave" Header="Save"/>
+                        <MenuItem x:Name="mnuSaveAs" Header="Save As..."/>
+                        <MenuItem x:Name="mnuBackupProjectNow" Header="Backup Project Now"/>
+                        <Separator x:Name="sep2"/>
+                        <MenuItem x:Name="mnuExit" Header="Exit"/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuEdit" Header="Edit" IsEnabled="False">
+                        <MenuItem x:Name="mnuUndo" Header="Undo"/>
+                        <MenuItem x:Name="mnuRedo" Header="Redo"/>
+                        <Separator x:Name="sep3"/>
+                        <MenuItem x:Name="mnuCut" Header="Cut"/>
+                        <MenuItem x:Name="mnuCopy" Header="Copy"/>
+                        <MenuItem x:Name="mnuPaste" Header="Paste"/>
+                        <MenuItem x:Name="mnuDelete" Header="Delete"/>
+                        <MenuItem x:Name="mnuSelectAll" Header="Select All"/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuView" Header="View" IsEnabled="False">
+                        <MenuItem x:Name="mnuZoomIn" Header="Zoom In"/>
+                        <MenuItem x:Name="mnuZoomOut" Header="Zoom Out"/>
+                        <MenuItem x:Name="mnuZoomToFit" Header="Zoom to Fit"/>
+                        <Separator x:Name="sep4"/>
+                        <MenuItem x:Name="mnuViewStandardToolbar" Header="Standard Toolbar" IsCheckable="True"/>
+                        <MenuItem x:Name="mnuViewProjectToolbar" Header="Project Toolbar" IsCheckable="True"/>
+                        <MenuItem x:Name="mnuViewTextToolbar" Header="Text Toolbar" IsCheckable="True"/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuProject" Header="Project" IsEnabled="False">
+                        <MenuItem x:Name="mnuProjectProperties" Header="Project Properties"/>
+                        <Separator x:Name="sep5"/>
+                        <MenuItem x:Name="mnuAddQuiz" Header="Add Quiz"/>
+                        <MenuItem x:Name="mnuRemoveQuiz" Header="Remove Quiz"/>
+                        <MenuItem x:Name="mnuAddWorksheet" Header="Add Worksheet"/>
+                        <MenuItem x:Name="mnuRemoveWorksheet" Header="Remove Worksheet"/>
+                        <MenuItem x:Name="mnuAddScenario" Header="Add Scenario"/>
+                        <MenuItem x:Name="mnuRemoveScenario" Header="Remove Scenario"/>
+                        <Separator x:Name="sep6"/>
+                        <MenuItem x:Name="mnuImportProjectComponent" Header="Import Project Component..."/>
+                        <MenuItem x:Name="mnuExportCurrentComponent" Header="Export Current Component..."/>
+                        <MenuItem x:Name="mnuGetMoreComponents" Header="Get More Components..."/>
+                        <Separator x:Name="sep7"/>
+                        <MenuItem x:Name="mnuPublishCurrentComponent" Header="Publish Current Component..."/>
+                        <MenuItem x:Name="mnuPublishProject" Header="Publlish Project..."/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuText" Header="Text" IsEnabled="False">
+                        <MenuItem x:Name="muSetTextBold" Header="Bold" IsCheckable="True"/>
+                        <MenuItem x:Name="mnuSetTextItalic" Header="Italic" IsCheckable="True" IsChecked="True"/>
+                        <MenuItem x:Name="mnuSetTextUnderline" Header="Underline" IsCheckable="True"/>
+                        <MenuItem x:Name="mnuSetTextStrikethrough" Header="Strikethrough" IsCheckable="True"/>
+                        <Separator x:Name="sep8"/>
+                        <MenuItem x:Name="mnuChangeTextColor" Header="Text Color">
+                            <MenuItem x:Name="mnuColorBlack" Header="Black" IsCheckable="True"/>
+                            <Separator x:Name="sep9"/>
+                            <MenuItem x:Name="mnuColorRed" Header="Red" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorOrange" Header="Orange" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorYellow" Header="Yellow" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorGreen" Header="Green" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorBlue" Header="Blue" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorIndigo" Header="Indigo" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuColorViolet" Header="Violet" IsCheckable="True"/>
+                            <Separator x:Name="sep10"/>
+                            <MenuItem x:Name="mnuColorCustom" Header="Custom..." IsCheckable="True"/>
+                        </MenuItem>
+                        <MenuItem x:Name="mnuTextStylePresets" Header="Presets">
+                            <MenuItem x:Name="mnuPreset1" Header="Preset 1" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuPreset2" Header="Preset 2" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuPreset3" Header="Preset 3" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuPreset4" Header="Preset 4" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuPreset5" Header="Preset 5" IsCheckable="True"/>
+                            <MenuItem x:Name="mnuPreset6" Header="Preset 6" IsCheckable="True"/>
+                            <Separator x:Name="sep11"/>
+                            <MenuItem x:Name="mnuSavePreset" Header="Save Preset...">
+                            </MenuItem>
+
+                        </MenuItem>
+                        <Separator x:Name="sep12"/>
+                        <MenuItem x:Name="mnuResetStyles" Header="Reset Styles"/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuTools" Header="Tools">
+                        <MenuItem x:Name="mnuCustomize" Header="Customize..."/>
+                        <MenuItem x:Name="mnuOptions" Header="Options..."/>
+                        <Separator x:Name="sep13"/>
+                        <MenuItem Header="Add-Ons (Experimental)..."/>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuWindow" Header="Window">
+                        <MenuItem x:Name="mnuLoadLayout" Header="Load Layout..."/>
+                        <MenuItem x:Name="mnuSaveLayout" Header="Save Layout..."/>
+                        <MenuItem Header="Reset Layout"/>
+                        <Separator x:Name="sep14"/>
+                        <MenuItem x:Name="mnuShowPanel" Header="Show Panel">
+                            <MenuItem x:Name="mnuShowPanelProjectHierarchy" Header="Project Hierarchy" IsCheckable="True" IsChecked="True"/>
+                            <MenuItem x:Name="mnuShowPanelObjectProperties" Header="Object Properties"/>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem x:Name="mnuHelp" Header="Help">
+                        <MenuItem x:Name="mnuOnlineHelp" Header="Online Help"/>
+                        <MenuItem x:Name="mnuOfflineHelp" Header="Offline Help"/>
+                        <Separator x:Name="sept15"/>
+                        <MenuItem x:Name="mnuCheckForUpdates" Header="Check for Updates..."/>
+                        <MenuItem x:Name="mnuAbout" Header="About"/>
+                    </MenuItem>
+                </Menu>
+                <TabControl x:Name="tabMain" Margin="0,25,0,40" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16"/>
+                <StatusBar Height="41" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Stretch" Grid.RowSpan="2" FontSize="16">
+                    <Label x:Name="stlProjectName" Content="No Project Open." />
+                </StatusBar>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

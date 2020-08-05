@@ -100,50 +100,8 @@
     <Compile Include="AccountWatcher.cs" />
     <Compile Include="Avatar.cs" />
     <Compile Include="Chat.cs" />
-    <Compile Include="ChatDisplay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ChatDisplay.Designer.cs">
-      <DependentUpon>ChatDisplay.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChatEventArgs.cs" />
     <Compile Include="ChatMessage.cs" />
-    <Compile Include="ChatMessageDisplay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ChatMessageDisplay.Designer.cs">
-      <DependentUpon>ChatMessageDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChat.Designer.cs">
-      <DependentUpon>frmChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmConnectingToServer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConnectingToServer.Designer.cs">
-      <DependentUpon>FrmConnectingToServer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDeleteAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDeleteAccount.Designer.cs">
-      <DependentUpon>frmDeleteAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReport.Designer.cs">
-      <DependentUpon>frmReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmUpdatesAvailable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUpdatesAvailable.Designer.cs">
-      <DependentUpon>frmUpdatesAvailable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Infraction.cs" />
@@ -160,31 +118,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="SpamFilter.cs" />
+    <Compile Include="SubmissionType.cs" />
     <Compile Include="Submission.cs" />
+    <Compile Include="UpdatesAvailableWindow.xaml.cs">
+      <DependentUpon>UpdatesAvailableWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserRole.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ChatDisplay.resx">
-      <DependentUpon>ChatDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChatMessageDisplay.resx">
-      <DependentUpon>ChatMessageDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmChat.resx">
-      <DependentUpon>frmChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmConnectingToServer.resx">
-      <DependentUpon>FrmConnectingToServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDeleteAccount.resx">
-      <DependentUpon>frmDeleteAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
-      <DependentUpon>frmReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdatesAvailable.resx">
-      <DependentUpon>frmUpdatesAvailable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources_es_mx.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_es_mx.Designer.cs</LastGenOutput>
@@ -217,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_profile_banned_user.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UpdatesAvailableWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />

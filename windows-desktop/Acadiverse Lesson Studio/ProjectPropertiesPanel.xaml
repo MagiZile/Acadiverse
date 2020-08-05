@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Acadiverse_Lesson_Studio.ProjectPropertiesPanel"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:local="clr-namespace:Acadiverse_Lesson_Studio"
+         mc:Ignorable="d" 
+         d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Green" BorderThickness="1" Grid.Column="0">
+                <!--If you remove the border, don't forget to put the Grid.Column="0" part on the Grid -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Instead of defining the rows for the Grid, you could place it in a StackPanel with an Orientation set to Vertical but the ListBox won't
+                resize to fit the height available-->
+                    <ListBox MinHeight="397" MinWidth="210" Grid.Row="1" SelectedIndex="0">
+                        <ListBoxItem x:Name="lbiProjectInfo" Content="Project Info" FontSize="20"/>
+                        <ListBoxItem x:Name="lbiSecurity" Content="Security" FontSize="20"/>
+                        <ListBoxItem/>
+                    </ListBox>
+                </Grid>
+            </Border>
+            <Border BorderBrush="red" BorderThickness="1" Grid.Column="1">
+                <!--If you remove the border, don't forget to put the Grid.Column="1" part on the StackPanel -->
+                </Border>
+        </Grid>
+    </Grid>
+</UserControl>

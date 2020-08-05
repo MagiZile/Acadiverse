@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagiZile.UtilityComponents
 {
-    public class UndoBuffer
+    public partial class UndoBuffer
     {
         string filePath = "";
         int maxUndos = 10;
@@ -24,24 +23,6 @@ namespace MagiZile.UtilityComponents
         {
             this.maxUndos = maxUndos;
             this.programObjects = programObjects;
-        }
-
-        public class UndoRedoEventArgs : EventArgs
-        {
-            public UndoRedoEventArgs(int data)
-            {
-                newUndoIndex = data;
-            }
-
-            int newUndoIndex = 0;
-
-            public int NewUndoIndex
-            {
-                get
-                {
-                    return newUndoIndex;
-                }
-            }
         }
 
         public delegate void UndoRedoEventHandler(object sender, UndoRedoEventArgs e);

@@ -272,9 +272,9 @@ namespace MagiZile.Acadiverse.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your password is incorrect..
         /// </summary>
-        public static string str_incorrect_passwrod {
+        public static string str_incorrect_password {
             get {
-                return ResourceManager.GetString("str_incorrect_passwrod", resourceCulture);
+                return ResourceManager.GetString("str_incorrect_password", resourceCulture);
             }
         }
         

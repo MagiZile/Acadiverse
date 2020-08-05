@@ -61,16 +61,6 @@ namespace Acadiverse_Lesson_Studio.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap img_profile_default {
-            get {
-                object obj = ResourceManager.GetObject("img_profile_default", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to This project file is corrupted or damaged..
         /// </summary>
         internal static string str_project_corrupted {

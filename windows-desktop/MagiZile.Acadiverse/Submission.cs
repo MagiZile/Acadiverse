@@ -17,8 +17,10 @@ namespace MagiZile.Acadiverse
         int numberOfVotes;
         BsonArray comments;
         string submissionContents;
-        string tags;
-        string[] tagsList;
+        BsonArray tags;
+        SubmissionType type;
+        int price;
+        bool isStoreItem;
 
         public Submission(string name)
         {
@@ -30,6 +32,10 @@ namespace MagiZile.Acadiverse
             this.LastUpdated = DateTime.Now;
             this.NumberOfVotes = 0;
             this.Comments = new BsonArray();
+            this.Tags = new BsonArray();
+            type = SubmissionType.Scenario;
+            price = 0;
+            IsStoreItem = false;
         }
 
         public BsonObjectId Id { get => id; set => id = value; }
@@ -41,8 +47,11 @@ namespace MagiZile.Acadiverse
         public int NumberOfVotes { get => numberOfVotes; set => numberOfVotes = value; }
         public BsonArray Comments { get => comments; set => comments = value; }
         public string SubmissionContents { get => submissionContents; set => submissionContents = value; }
-        public string Tags { get => tags; set => tags = value; }
-        public string[] TagsList { get => tags.Split(' '); }
+        public BsonArray Tags { get => tags; set => tags = value; }
+        public SubmissionType Type { get => Type1; set => Type1 = value; }
+        public SubmissionType Type1 { get => type; set => type = value; }
+        public int Price { get => price; set => price = value; }
+        public bool IsStoreItem { get => isStoreItem; set => isStoreItem = value; }
 
         public void SaveToServer()
         {
@@ -57,6 +66,8 @@ namespace MagiZile.Acadiverse
                 Globals.UpdateValue("submission", "__id", Id.AsString, "comments", Comments);
                 Globals.UpdateValue("submissions", "_id", Id.AsString, "submission_contents", SubmissionContents);
                 Globals.UpdateValue("submissions", "_id", Id.AsString, "tags", tags);
+                Globals.UpdateValue("submissions", "_id", Id.AsString, "type", type.ToString());
+                Globals.UpdateValue("submissions", "_id", Id.AsString, "is_store_item", isStoreItem);
             }
             else
             {
@@ -72,9 +83,82 @@ namespace MagiZile.Acadiverse
                     {"number_of_votes", NumberOfVotes },
                     {"comments", Comments },
                     {"submission_contents", SubmissionContents },
-                    {"tags", Tags }
+                    {"tags", Tags },
+                    {"type", Type },
+                    {"price", Price },
+                    {"is_store_item", IsStoreItem }
                 };
             }
+        }
+        
+        public static Submission LoadFromServer(BsonObjectId id)
+        {
+            try
+            {
+                MongoClient dbclient = new MongoClient(Globals.CONNECTION_STRING);
+                var database = dbclient.GetDatabase("acadiverse");
+                var collection = database.GetCollection<BsonDocument>("submissions");
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+                var document = collection.Find(filter).FirstOrDefault();
+                SubmissionType submissionType;
+                switch (document.GetElement("type").Value.AsString)
+                {
+                    case "Hat":
+                        submissionType = SubmissionType.Hat;
+                        break;
+                    case "Eyewear":
+                        submissionType = SubmissionType.Eyewear;
+                        break;
+                    case "Top":
+                        submissionType = SubmissionType.Top;
+                        break;
+                    case "Bottom":
+                        submissionType = SubmissionType.Bottom;
+                        break;
+                    case "Footwear":
+                        submissionType = SubmissionType.Footwear;
+                        break;
+                    case "Decoration":
+                        submissionType = SubmissionType.Decoration;
+                        break;
+                    case "Worksheet":
+                        submissionType = SubmissionType.Worksheet;
+                        break;
+                    case "Scenario":
+                        submissionType = SubmissionType.Scenario;
+                        break;
+                    case "Quiz":
+                        submissionType = SubmissionType.Quiz;
+                        break;
+                    default:
+                        throw (new InvalidOperationException());
+                }
+                return new Submission(document.GetElement("name").Value.AsString)
+                {
+                    Description = document.GetElement("description").Value.AsString,
+                    Author = Account.LoadFromServer(document.GetElement("author").Value.AsString),
+                    DatePublished = document.GetElement("date_published").Value.ToUniversalTime(),
+                    LastUpdated = document.GetElement("last_updated").Value.ToUniversalTime(),
+                    NumberOfVotes = document.GetElement("number_of_votes").Value.AsInt32,
+                    Comments = document.GetElement("comments").Value.AsBsonArray,
+                    SubmissionContents = document.GetElement("submission_contents_").Value.AsString,
+                    Tags = document.GetElement("tags").Value.AsBsonArray,
+                    Type = submissionType,
+                    Price = document.GetElement("price").Value.AsInt32,
+                    IsStoreItem = document.GetElement("is_store_item").Value.AsBoolean,
+                };
+            }
+#pragma warning disable CA1031 // Do not catch general exception types
+            catch (DnsClient.DnsResponseException)
+            {
+                Globals.ShowErrorMessage(Properties.Resources.str_connection_error);
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+            catch (TimeoutException)
+            {
+                Globals.ShowErrorMessage("The connection timed out. Please check your firewall settings to see if Acadiverse Desktop Client for Windows is blocked. Don't worry; all Acadiverse programs are safe!");
+            }
+            return null;
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Acadiverse_Lesson_Studio.WorksheetPanel"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:local="clr-namespace:Acadiverse_Lesson_Studio"
+         mc:Ignorable="d" 
+         d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Blue" BorderThickness="1" Grid.Row="0" Grid.RowSpan="2">
+            <!--If you remove the border, don't forget to put the Grid.Row="0" part on the RichTextBox -->
+            <RichTextBox x:Name="rtbWorksheet" />
+        </Border>
+           </Grid>
+</UserControl>

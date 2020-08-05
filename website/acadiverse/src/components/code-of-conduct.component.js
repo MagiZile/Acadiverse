@@ -45,11 +45,11 @@ export default class AboutComponent extends Component {
 
 				<h2>Consequences and enforcement</h2>
 				<p>If you break one of the above rules, there will be consequences. For a first or minor offence, you will get a warning from a moderator. Submissions or chat messages may also be removed.</p>
-				<p>If you choose to ignore these warnings, restrictions will be placed on your account: For example, repreatedly sumbitting content that can be considered spam may result in you getting banned from publishing anything to Acadiverse.</p>
+				<p>If you choose to ignore these warnings, restrictions will be placed on your account: For example, repreatedly submitting content that can be considered spam may result in you getting banned from publishing anything to Acadiverse.</p>
 				<p>If you are banned, you will not be allowed to use Acadiverse in any way. If you are banned for a certain amount of time, use that time to read the Code of Conduct. Future infractions after a ban will result in longer bans and even being permanently banned from using Acadiverse.</p>
 
 				<h2>Appealing</h2>
-				<p>If you believe that a ban or other restriction was imposed in error, you may appeal by going to <a heaf="/account/appeal">this page.</a> Please be kind and respectful in your appeal.</p>
+				<p>If you believe that a ban or other restriction was imposed in error, you may appeal by going to <a href="/account/appeal">this page</a>. Please be kind and respectful in your appeal.</p>
 				<p>A good appeal should be an explanation of why your ban or other restrictions should be lifted. We are also more likely to accept the appeal if you can convince us that you will be a respectful player on Acadiverse. Please note that you only get one chance at an appeal: whatever the staff decides is final. If you are permanently banned for posting illegal content, using multiple accounts, or attempting to circumvent restrictions, you will not be able to appeal.</p>
 				<p>After a successful appeal, you will be able to use Acadiverse again and will have all restrictions lifted. Please note, however, that any furthwer violations of the Code of Conduct will result in another permanent ban, and you will not be able to appeal.</p>
             </Container>

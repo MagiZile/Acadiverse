@@ -2,6 +2,9 @@
 
 namespace Acadiverse_Lesson_Studio
 {
+    /// <summary>
+    /// Base class for Acadiverse quiz questions.
+    /// </summary>
     public abstract class QuizQuestion
     {
         string questionText;

@@ -208,7 +208,7 @@
     <value>Are you sure you wish to delete this message? This can NOT be undone!</value>
     <comment>This is the confirmation that is shown when deleting a chat message or a PM.</comment>
   </data>
-  <data name="str_incorrect_passwrod" xml:space="preserve">
+  <data name="str_incorrect_password" xml:space="preserve">
     <value>Your password is incorrect.</value>
     <comment>This message is shown when the user enters an incorrect password.</comment>
   </data>
@@ -294,7 +294,7 @@
   </data>
   <data name="str_report_message_contents" xml:space="preserve">
     <value>$1 has reported $2 for the following reason: $3. The context of the report (the content that $1 reported $2) for is: $4. Please review this content immediately.</value>
-    <comment>This is the PM what is sent to moderators when a user reports another user.</comment>
+    <comment>This is the PM that is sent to moderators when a user reports another user.</comment>
   </data>
   <data name="str_report_message_subject" xml:space="preserve">
     <value>$1 has reported $2.</value>

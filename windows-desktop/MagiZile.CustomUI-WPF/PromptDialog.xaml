@@ -1,0 +1,14 @@
+﻿<Window x:Class="MagiZile.CustomUI_WPF.PromptDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagiZile.CustomUI_WPF"
+        mc:Ignorable="d"
+        Title="PromptDialog" Height="109" Width="334">
+    <Grid>
+        <Label Content="Enter Text:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.348"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,41,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="315"/>
+
+    </Grid>
+</Window>

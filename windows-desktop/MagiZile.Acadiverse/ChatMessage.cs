@@ -10,6 +10,9 @@ using System.Windows.Media.Animation;
 
 namespace MagiZile.Acadiverse
 {
+    /// <summary>
+    /// Represents a message sent in chat.
+    /// /// </summary>
     public class ChatMessage
     {
 

@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import AdBlockDetect from 'react-ad-block-detect';
 import { withRouter } from 'react-router-dom';
 import { Button, Menu, Advertisement, Container, Radio, Form } from 'semantic-ui-react';
-export default class RegisterComponent extends Component {
+
+import '../index.css';
+export default class RegisterForm extends Component {
     state = {}
 
     handleChange = (e, { value }) => this.setState({ value })
@@ -14,7 +16,7 @@ export default class RegisterComponent extends Component {
 
     render() {
         return (
-            <Form>
+            <Form id="modal">
                 <Form.Field>
                     <label>Username</label>
                     <input placeholder="Enter the username for your new account." />

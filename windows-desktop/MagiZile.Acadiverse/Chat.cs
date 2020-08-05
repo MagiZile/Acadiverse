@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace MagiZile.Acadiverse
 {
+    /// <summary>
+    /// Represents an Acadiverse chat, which is similar to a chatroom.
+    /// </summary>
     public class Chat
     {
         public event EventHandler<ChatEventArgs> ChatMessageSent;

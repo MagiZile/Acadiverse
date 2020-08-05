@@ -286,6 +286,7 @@ namespace MagiZile.UserInteractions.ParentalControls
         /// <returns>Whether or not the text specified contains a bad word.</returns>
         public bool ContainsBadWords(string text, bool wholeWordsOnly)
         {
+
             List<string> FilterExceptions;
             switch (level)
             {

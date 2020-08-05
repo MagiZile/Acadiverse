@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 60</value>
@@ -192,7 +192,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 99</value>
@@ -213,13 +213,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lnkForgotPAssword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lnkForgotPAssword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 129</value>
+    <value>15, 149</value>
   </data>
   <data name="lnkForgotPAssword.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 13</value>
@@ -240,7 +240,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lnkForgotPAssword.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 129</value>
@@ -264,6 +264,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkKeepUserLoggedIn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkKeepUserLoggedIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 129</value>
+  </data>
+  <data name="chkKeepUserLoggedIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 17</value>
+  </data>
+  <data name="chkKeepUserLoggedIn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chkKeepUserLoggedIn.Text" xml:space="preserve">
+    <value>Keep me logged in.</value>
+  </data>
+  <data name="&gt;&gt;chkKeepUserLoggedIn.Name" xml:space="preserve">
+    <value>chkKeepUserLoggedIn</value>
+  </data>
+  <data name="&gt;&gt;chkKeepUserLoggedIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkKeepUserLoggedIn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkKeepUserLoggedIn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="lblLogin.AutoSize" type="System.Boolean, mscorlib">
@@ -294,7 +321,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLogin.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnRegister.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 168</value>

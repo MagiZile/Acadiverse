@@ -225,10 +225,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Acadiverse Lesson Studio\Acadiverse Lesson Studio.csproj">
-      <Project>{def9a895-3afd-443f-bcbf-80cf91c2b0b1}</Project>
-      <Name>Acadiverse Lesson Studio</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MagiZile.Acadiverse\MagiZile.Acadiverse.csproj">
       <Project>{e8544a9f-4af2-469d-9cfb-c7a3bb5845f2}</Project>
       <Name>MagiZile.Acadiverse</Name>

@@ -46,11 +46,11 @@
             this.txtSearchChats = new System.Windows.Forms.TextBox();
             this.lstChats = new System.Windows.Forms.ListBox();
             this.tabUserRoles = new System.Windows.Forms.TabPage();
-            this.lstUserRoles = new System.Windows.Forms.ListBox();
-            this.btnAddUserRole = new System.Windows.Forms.Button();
-            this.lblAssociatedUsers = new System.Windows.Forms.Label();
-            this.lstAssociatedUsers = new System.Windows.Forms.ListBox();
             this.btnAddUser = new System.Windows.Forms.Button();
+            this.lstAssociatedUsers = new System.Windows.Forms.ListBox();
+            this.lblAssociatedUsers = new System.Windows.Forms.Label();
+            this.btnAddUserRole = new System.Windows.Forms.Button();
+            this.lstUserRoles = new System.Windows.Forms.ListBox();
             this.tabMain.SuspendLayout();
             this.tabAccounts.SuspendLayout();
             this.tabChats.SuspendLayout();
@@ -250,15 +250,32 @@
             this.tabUserRoles.Text = "User Roles";
             this.tabUserRoles.UseVisualStyleBackColor = true;
             // 
-            // lstUserRoles
+            // btnAddUser
             // 
-            this.lstUserRoles.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lstUserRoles.FormattingEnabled = true;
-            this.lstUserRoles.Location = new System.Drawing.Point(3, 3);
-            this.lstUserRoles.Name = "lstUserRoles";
-            this.lstUserRoles.Size = new System.Drawing.Size(161, 476);
-            this.lstUserRoles.TabIndex = 0;
-            this.lstUserRoles.SelectedIndexChanged += new System.EventHandler(this.LstUserRoles_SelectedIndexChanged);
+            this.btnAddUser.Location = new System.Drawing.Point(322, 19);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(108, 23);
+            this.btnAddUser.TabIndex = 4;
+            this.btnAddUser.Text = "Add User...";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
+            // 
+            // lstAssociatedUsers
+            // 
+            this.lstAssociatedUsers.FormattingEnabled = true;
+            this.lstAssociatedUsers.Location = new System.Drawing.Point(169, 19);
+            this.lstAssociatedUsers.Name = "lstAssociatedUsers";
+            this.lstAssociatedUsers.Size = new System.Drawing.Size(147, 420);
+            this.lstAssociatedUsers.TabIndex = 3;
+            // 
+            // lblAssociatedUsers
+            // 
+            this.lblAssociatedUsers.AutoSize = true;
+            this.lblAssociatedUsers.Location = new System.Drawing.Point(167, 3);
+            this.lblAssociatedUsers.Name = "lblAssociatedUsers";
+            this.lblAssociatedUsers.Size = new System.Drawing.Size(95, 13);
+            this.lblAssociatedUsers.TabIndex = 2;
+            this.lblAssociatedUsers.Text = "Associated Users::";
             // 
             // btnAddUserRole
             // 
@@ -271,40 +288,23 @@
             this.btnAddUserRole.UseVisualStyleBackColor = true;
             this.btnAddUserRole.Click += new System.EventHandler(this.BtnAddUserRole_Click);
             // 
-            // lblAssociatedUsers
+            // lstUserRoles
             // 
-            this.lblAssociatedUsers.AutoSize = true;
-            this.lblAssociatedUsers.Location = new System.Drawing.Point(167, 3);
-            this.lblAssociatedUsers.Name = "lblAssociatedUsers";
-            this.lblAssociatedUsers.Size = new System.Drawing.Size(95, 13);
-            this.lblAssociatedUsers.TabIndex = 2;
-            this.lblAssociatedUsers.Text = "Associated Users::";
+            this.lstUserRoles.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lstUserRoles.FormattingEnabled = true;
+            this.lstUserRoles.Location = new System.Drawing.Point(3, 3);
+            this.lstUserRoles.Name = "lstUserRoles";
+            this.lstUserRoles.Size = new System.Drawing.Size(161, 476);
+            this.lstUserRoles.TabIndex = 0;
+            this.lstUserRoles.SelectedIndexChanged += new System.EventHandler(this.LstUserRoles_SelectedIndexChanged);
             // 
-            // lstAssociatedUsers
-            // 
-            this.lstAssociatedUsers.FormattingEnabled = true;
-            this.lstAssociatedUsers.Location = new System.Drawing.Point(169, 19);
-            this.lstAssociatedUsers.Name = "lstAssociatedUsers";
-            this.lstAssociatedUsers.Size = new System.Drawing.Size(147, 420);
-            this.lstAssociatedUsers.TabIndex = 3;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Location = new System.Drawing.Point(322, 19);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(108, 23);
-            this.btnAddUser.TabIndex = 4;
-            this.btnAddUser.Text = "Add User...";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
-            // 
-            // frmMain
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 508);
             this.Controls.Add(this.tabMain);
-            this.Name = "frmMain";
+            this.Name = "FrmMain";
             this.Text = "Acadiverse Admin Panel";
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
             this.tabMain.ResumeLayout(false);
