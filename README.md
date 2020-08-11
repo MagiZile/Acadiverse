@@ -4,7 +4,7 @@ A free gamified education platform.
 # Acadiverse Model Editor
 Acadiverse Model Editor is built upon VoxEditor (https://github.com/trymnilsen/VoxEditor) by Trym Nilsen (@trymnilsen)
 
-# License for VoxEditor:
+License for VoxEditor:
 
 MIT License
 
